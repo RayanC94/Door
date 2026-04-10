@@ -649,25 +649,15 @@ body.menu-open .nav-toggle__line::after {
   margin: 0;
 }
 
-.problem-cards,
-.solution-cards {
+.access-compare {
   display: grid;
-  gap: 1rem;
-}
-
-.problem-cards {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
   margin-top: 2rem;
 }
 
-.solution-cards {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  margin-top: 1.4rem;
-}
-
-.problem-card,
-.solution-card {
-  padding: 1.2rem 1.25rem;
+.compare-panel {
+  padding: 1.35rem;
   border-radius: 1.6rem;
   background: rgba(255, 255, 255, 0.72);
   box-shadow:
@@ -675,18 +665,89 @@ body.menu-open .nav-toggle__line::after {
     var(--shadow-soft);
 }
 
-.problem-card strong,
-.solution-card strong {
+.compare-panel--bad {
+  background:
+    linear-gradient(180deg, rgba(255, 119, 89, 0.12), rgba(255, 255, 255, 0.7)),
+    rgba(255, 255, 255, 0.72);
+}
+
+.compare-panel--good {
+  background:
+    linear-gradient(180deg, rgba(0, 200, 83, 0.1), rgba(255, 255, 255, 0.72)),
+    rgba(255, 255, 255, 0.72);
+}
+
+.compare-panel__header {
+  display: grid;
+  gap: 0.7rem;
+  margin-bottom: 1rem;
+}
+
+.compare-panel__header strong {
   display: block;
-  margin-bottom: 0.35rem;
-  font-size: 0.98rem;
+  font-size: 1.15rem;
   font-weight: 800;
   letter-spacing: -0.03em;
 }
 
-.problem-card span,
-.solution-card span {
+.compare-chip {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  min-height: 2rem;
+  padding: 0 0.9rem;
+  border-radius: 999px;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.compare-chip--bad {
+  color: #9b2d10;
+  background: rgba(255, 119, 89, 0.14);
+}
+
+.compare-chip--good {
+  color: #0d6b35;
+  background: rgba(0, 200, 83, 0.14);
+}
+
+.compare-list {
+  display: grid;
+  gap: 0.85rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.compare-list li {
+  position: relative;
+  padding-left: 1.65rem;
   color: var(--text-soft);
+}
+
+.compare-list li::before {
+  position: absolute;
+  left: 0;
+  top: 0.32rem;
+  width: 0.82rem;
+  height: 0.82rem;
+  border-radius: 999px;
+  content: "";
+}
+
+.compare-list--bad li::before {
+  background:
+    linear-gradient(135deg, rgba(255, 119, 89, 1), rgba(180, 52, 23, 1));
+  box-shadow: 0 0 0 0.28rem rgba(255, 119, 89, 0.12);
+}
+
+.compare-list--good li::before {
+  background:
+    linear-gradient(135deg, rgba(0, 200, 83, 1), rgba(18, 148, 70, 1));
+  box-shadow: 0 0 0 0.28rem rgba(0, 200, 83, 0.12);
 }
 
 .proof-card {
@@ -1867,8 +1928,7 @@ body.menu-open .nav-toggle__line::after {
   }
 
   .data-strip,
-  .problem-cards,
-  .solution-cards,
+  .access-compare,
   .trust-grid,
   .steps,
   .lock-grid,
@@ -1890,10 +1950,6 @@ body.menu-open .nav-toggle__line::after {
 
   .showcase-lock--featured {
     grid-row: auto;
-  }
-
-  .solution-cards {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
@@ -1945,8 +2001,7 @@ body.menu-open .nav-toggle__line::after {
     grid-template-columns: 1fr;
   }
 
-  .problem-cards,
-  .solution-cards {
+  .access-compare {
     grid-template-columns: 1fr;
   }
 
@@ -1992,8 +2047,7 @@ body.menu-open .nav-toggle__line::after {
   }
 
   .data-strip,
-  .problem-cards,
-  .solution-cards,
+  .access-compare,
   .trust-grid,
   .steps,
   .lock-grid,
