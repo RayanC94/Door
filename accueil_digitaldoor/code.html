@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-on-surface": "#f0f0f2",
+                    "on-secondary-container": "#f9f7ff",
+                    "on-secondary": "#ffffff",
+                    "inverse-primary": "#c6c4df",
+                    "secondary-fixed": "#dae1ff",
+                    "surface-container-lowest": "#ffffff",
+                    "surface": "#f9f9fb",
+                    "on-background": "#1a1c1d",
+                    "surface-variant": "#e2e2e4",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-low": "#f3f3f5",
+                    "secondary-fixed-dim": "#b3c5ff",
+                    "surface-container-high": "#e8e8ea",
+                    "outline-variant": "#c8c5cd",
+                    "on-tertiary-fixed-variant": "#00531e",
+                    "error-container": "#ffdad6",
+                    "on-error-container": "#93000a",
+                    "error": "#ba1a1a",
+                    "inverse-surface": "#2f3132",
+                    "outline": "#78767d",
+                    "on-secondary-fixed": "#001849",
+                    "on-surface": "#1a1c1d",
+                    "primary-fixed": "#e2e0fc",
+                    "surface-container-highest": "#e2e2e4",
+                    "tertiary-container": "#002208",
+                    "primary": "#00000b",
+                    "tertiary": "#000100",
+                    "surface-bright": "#f9f9fb",
+                    "background": "#f9f9fb",
+                    "on-surface-variant": "#47464c",
+                    "secondary-container": "#0266ff",
+                    "on-error": "#ffffff",
+                    "tertiary-fixed": "#69ff87",
+                    "on-primary-container": "#83829b",
+                    "secondary": "#0050cc",
+                    "on-primary-fixed-variant": "#45455b",
+                    "on-tertiary-fixed": "#002108",
+                    "surface-tint": "#5d5c74",
+                    "primary-fixed-dim": "#c6c4df",
+                    "surface-dim": "#d9dadc",
+                    "on-primary": "#ffffff",
+                    "surface-container": "#eeeef0",
+                    "primary-container": "#1a1a2e",
+                    "tertiary-fixed-dim": "#3ce36a",
+                    "on-tertiary-container": "#00993e",
+                    "on-secondary-fixed-variant": "#003fa4",
+                    "on-primary-fixed": "#1a1a2e"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Inter"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-nav {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .text-editorial {
+            letter-spacing: -0.02em;
+        }
+        .signature-gradient {
+            background: linear-gradient(135deg, #1a1a2e 0%, #45455b 100%);
+        }
+        .cta-gradient {
+            background: linear-gradient(135deg, #0066FF 0%, #003fa4 100%);
+        }
+        .status-halo-green {
+            background: radial-gradient(circle, rgba(0, 200, 83, 0.15) 0%, rgba(255, 255, 255, 0) 70%);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-slate-50/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-sm">
+<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+<div class="text-2xl font-bold tracking-tight text-slate-900 dark:text-slate-50">SecureCurator</div>
+<div class="hidden md:flex items-center space-gap-8 gap-8 font-sans antialiased text-base font-medium">
+<a class="text-blue-600 dark:text-blue-400 border-b-2 border-blue-600 pb-1" href="#">Locks</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors" href="#">Packs</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors" href="#">Compatibility</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors" href="#">Contact</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="hidden md:block text-slate-600 font-medium hover:text-slate-900 transition-colors">Login</button>
+<button class="bg-secondary-container text-on-secondary px-6 py-2.5 rounded-xl font-medium hover:scale-[1.02] transition-transform duration-200 active:scale-95">Get Started</button>
+</div>
+</div>
+</nav>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="relative overflow-hidden px-8 py-20 md:py-32 max-w-7xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="z-10 text-left lg:pr-12">
+<span class="text-secondary font-medium tracking-wider uppercase text-xs mb-4 block">Hôtellerie Nouvelle Génération</span>
+<h1 class="text-editorial text-5xl md:text-7xl font-bold text-primary leading-tight mb-8">
+                        Vos voyageurs entrent. <span class="text-secondary">Vous ne bougez pas.</span>
+</h1>
+<p class="text-lg text-on-surface-variant max-w-lg mb-10 leading-relaxed">
+                        Optimisez la gestion de vos locations Airbnb avec nos serrures connectées professionnelles. Installation, configuration et automatisation complète pour une tranquillité d'esprit totale.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button class="cta-gradient text-white px-8 py-4 rounded-xl font-bold hover:scale-[1.02] transition-all shadow-lg">Découvrir les packs</button>
+<button class="border border-outline-variant/20 text-primary px-8 py-4 rounded-xl font-bold hover:bg-surface-container-low transition-all">Diagnostic gratuit</button>
+</div>
+</div>
+<div class="relative">
+<div class="absolute -top-20 -right-20 w-96 h-96 bg-secondary/5 rounded-full blur-3xl"></div>
+<div class="relative rounded-3xl overflow-hidden shadow-2xl">
+<img alt="Serrure intelligente installée" class="w-full h-[500px] object-cover" data-alt="close-up of a sleek minimalist matte black smart lock on a contemporary wooden door with soft sunlight and high-end aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkHPUGlXR-ZiA5P4dh8CkE9TFfm8sqkPVKZxAL-NVknSn2oB6qcBVhniG5ao4zJS_1bYvNMxkcjYp5AMYnLg577RA2YwHswuOvo6GwBrHA83y51R7oEzIW5RX-LEnqKOW7zQWerQXOjWFfACPLTwcnU6kPc03OB0XRCRhhemgDg0nTeybZI53G_gDv6vRAIM1j563gf4k4S9WkWVe1FyXK4Q1aRfMkD9ngLEHUODMKecc9yJgtpTKNO2HQZz3yPziJ-8XX46uheXdB"/>
+<div class="absolute bottom-6 left-6 right-6 bg-white/90 backdrop-blur-md p-6 rounded-2xl flex items-center gap-4">
+<div class="w-12 h-12 rounded-full signature-gradient flex items-center justify-center text-white">
+<span class="material-symbols-outlined" data-icon="key">key</span>
+</div>
+<div>
+<p class="text-sm font-bold text-primary">Accès sécurisé actif</p>
+<p class="text-xs text-on-surface-variant">Check-in automatique pour la villa 'Azur'</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust Markers -->
+<section class="bg-surface-container-low py-12">
+<div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary text-3xl" data-icon="star">star</span>
+<div>
+<p class="font-bold text-primary">4.95/5 note check-in</p>
+<p class="text-xs text-on-surface-variant">Moyenne sur plus de 10k entrées</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary text-3xl" data-icon="bolt">bolt</span>
+<div>
+<p class="font-bold text-primary">Installation en 1h</p>
+<p class="text-xs text-on-surface-variant">Par nos techniciens certifiés</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary text-3xl" data-icon="door_front">door_front</span>
+<div>
+<p class="font-bold text-primary">Compatible 80%</p>
+<p class="text-xs text-on-surface-variant">Des portes françaises standards</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Problem Section -->
+<section class="py-24 px-8 max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<div class="order-2 md:order-1">
+<div class="bg-surface-container-highest rounded-3xl p-8 relative overflow-hidden">
+<div class="flex flex-col gap-6">
+<div class="flex gap-4 items-start bg-surface-container-lowest p-6 rounded-2xl">
+<span class="material-symbols-outlined text-error" data-icon="schedule">schedule</span>
+<p class="text-on-surface-variant">Remise de clés à 23h un dimanche soir...</p>
+</div>
+<div class="flex gap-4 items-start bg-surface-container-lowest p-6 rounded-2xl opacity-60">
+<span class="material-symbols-outlined text-error" data-icon="key_off">key_off</span>
+<p class="text-on-surface-variant">Double des clés perdu par le voyageur</p>
+</div>
+<div class="flex gap-4 items-start bg-surface-container-lowest p-6 rounded-2xl opacity-40">
+<span class="material-symbols-outlined text-error" data-icon="distance">distance</span>
+<p class="text-on-surface-variant">45 min de trajet pour un retard de vol</p>
+</div>
+</div>
+</div>
+</div>
+<div class="order-1 md:order-2">
+<h2 class="text-4xl font-bold text-editorial mb-6 leading-tight">Fini le stress de la remise des clés en main propre.</h2>
+<p class="text-lg text-on-surface-variant mb-8">
+                        Être hôte Airbnb ne devrait pas signifier être disponible 24h/24 pour des imprévus logistiques. Libérez-vous des contraintes géographiques et temporelles.
+                    </p>
+<ul class="space-y-4">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary" data-icon="check_circle">check_circle</span>
+<span>Plus de déplacements inutiles</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary" data-icon="check_circle">check_circle</span>
+<span>Expérience voyageur premium</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary" data-icon="check_circle">check_circle</span>
+<span>Sécurité renforcée et traçabilité</span>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Solution Steps (Editorial Layout) -->
+<section class="bg-primary text-white py-24 overflow-hidden">
+<div class="max-w-7xl mx-auto px-8">
+<h2 class="text-4xl font-bold text-editorial mb-16 text-center">Une transition sans effort</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<div class="relative">
+<div class="text-8xl font-bold opacity-10 absolute -top-12 -left-4">01</div>
+<h3 class="text-2xl font-bold mb-4 relative z-10">On diagnostique</h3>
+<p class="text-on-primary-container leading-relaxed">Étude de votre porte et de vos besoins de flux voyageurs par nos experts à distance.</p>
+</div>
+<div class="relative">
+<div class="text-8xl font-bold opacity-10 absolute -top-12 -left-4">02</div>
+<h3 class="text-2xl font-bold mb-4 relative z-10">On installe</h3>
+<p class="text-on-primary-container leading-relaxed">Pose soignée en moins de 60 minutes sans perçage destructif de votre porte actuelle.</p>
+</div>
+<div class="relative">
+<div class="text-8xl font-bold opacity-10 absolute -top-12 -left-4">03</div>
+<h3 class="text-2xl font-bold mb-4 relative z-10">C'est automatique</h3>
+<p class="text-on-primary-container leading-relaxed">Synchronisation avec votre calendrier Airbnb. Vos voyageurs reçoivent leur code par SMS.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Product Cards (The Locks) -->
+<section class="py-24 px-8 max-w-7xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-bold text-editorial mb-4">Choisissez votre niveau de sérénité</h2>
+<p class="text-on-surface-variant">Trois configurations adaptées à votre type de location.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Access -->
+<div class="group bg-surface-container-low rounded-3xl p-8 hover:bg-white transition-all duration-300 hover:shadow-2xl flex flex-col h-full">
+<div class="mb-8 relative flex justify-center">
+<div class="status-halo-green absolute inset-0 scale-150"></div>
+<img alt="Serrure Access" class="h-64 object-contain relative z-10" data-alt="minimalist modern smart lock in silver brushed metal standing vertically against a clean studio background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAV5y8CLXd29jvBfR8oo9vpzQg1q9gKnZL9lUxGs7rni61yHCV0RABv9oUkB28RHsIOLLoyyICfuqyJn-HyEnbKXGsB_GSD8HGxXWOPGvQVwFbvloS4UuU6mbowvWf-WNjkO6oBnmQDQPAwR30awVDEIl2WXXwQ11nsIMTxnHI4ZzfvLWEw6GqTKQNhMtmnJs4ic8oGvZ9rTCkSt0llLrs3Ty4UMZv8SFwyoWtbz8DpDqyPU8j8FhNzzk5zmHrw4I5KTZU4NnjN-ZYT"/>
+</div>
+<div class="mt-auto">
+<div class="flex justify-between items-center mb-4">
+<h4 class="text-2xl font-bold">ACCESS</h4>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed px-3 py-1 rounded-full text-xs font-bold uppercase">Basic</span>
+</div>
+<p class="text-on-surface-variant mb-6">Idéal pour les appartements urbains avec peu de rotation.</p>
+<ul class="space-y-3 mb-8 text-sm">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-sm" data-icon="done">done</span> Bluetooth &amp; Clavier</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-sm" data-icon="done">done</span> App compagnon</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-sm" data-icon="done">done</span> Pose standard</li>
+</ul>
+<button class="w-full py-4 border border-outline-variant/30 rounded-xl font-bold group-hover:bg-secondary group-hover:text-white transition-all">Choisir Access</button>
+</div>
+</div>
+<!-- Pro -->
+<div class="group bg-primary text-white rounded-3xl p-8 transform scale-105 shadow-2xl flex flex-col h-full relative z-20">
+<div class="mb-8 relative flex justify-center">
+<div class="status-halo-green absolute inset-0 scale-150 opacity-20"></div>
+<img alt="Serrure Pro" class="h-64 object-contain relative z-10" data-alt="high-tech futuristic smart lock with glowing blue touch panel on dark metallic surface professional lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdqvq3MbNEnjMd6rrcYrOmaJTkCuQs7WXHQX37_tq7Z30-N3eaLotkQaY4biXF8eLLb0p619k9Mnsutwyp2IkmD4UQwNDXl5bKpbjcBh5SxAx3k8C_LFVlowep9PVqm4nINulSQko4N_16LPksBSf_0RnrAIUXs2gDjH1-g3SvCFPI7wizZb7UQasc_v868kVtmebx8JgWGxTzUICn8HBwShVmF18Q_eeXN12rD64h4fy7lP8K4qJPwYshVaEs90caS0Ifbp38fB_J"/>
+</div>
+<div class="mt-auto">
+<div class="flex justify-between items-center mb-4">
+<h4 class="text-2xl font-bold">PRO</h4>
+<span class="bg-secondary-container text-white px-3 py-1 rounded-full text-xs font-bold uppercase">Recommandé</span>
+</div>
+<p class="text-on-primary-container mb-6">Le best-seller pour les hôtes gérant 2 à 5 propriétés.</p>
+<ul class="space-y-3 mb-8 text-sm">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary-fixed text-sm" data-icon="done">done</span> Wi-Fi intégré</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary-fixed text-sm" data-icon="done">done</span> Synchro Airbnb Direct</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary-fixed text-sm" data-icon="done">done</span> Batterie 6 mois</li>
+</ul>
+<button class="w-full py-4 bg-white text-primary rounded-xl font-bold hover:bg-secondary-fixed transition-all">Choisir Pro</button>
+</div>
+</div>
+<!-- Fortress -->
+<div class="group bg-surface-container-low rounded-3xl p-8 hover:bg-white transition-all duration-300 hover:shadow-2xl flex flex-col h-full">
+<div class="mb-8 relative flex justify-center">
+<img alt="Serrure Fortress" class="h-64 object-contain" data-alt="heavy duty premium security smart lock in dark gunmetal finish with fingerprint scanner elegant architectural design" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNHnA6cs2oQ4NeStIEDWbc0X454lAiHxsJWKVBJbJNAA1GNXGffsoV2ZxYVJhu-uQ9N97IdyzUdR_gakwrE7VJGFGRSyiGOpiQoq5AuykK7PJBfwYXHR8IejyofFgTfmSCQQ1tYxHqeGXIfuCcZvoyfX3AnujbEUw0VmoErqZTHEQ4CVR7Gfsma8VyWnwRnEa2cpA1QhLO79LXbtP0_GXgPHmnEKsFK-kzq9zPU6-YNcOGPoMLi7yx-R9z1t6LBwzgNFd6ALsPoEtC"/>
+</div>
+<div class="mt-auto">
+<div class="flex justify-between items-center mb-4">
+<h4 class="text-2xl font-bold">FORTRESS</h4>
+<span class="bg-on-surface-variant text-white px-3 py-1 rounded-full text-xs font-bold uppercase">Luxe</span>
+</div>
+<p class="text-on-surface-variant mb-6">Sécurité maximale pour villas de prestige et conciergeries.</p>
+<ul class="space-y-3 mb-8 text-sm">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-sm" data-icon="done">done</span> Biométrie &amp; 4G</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-sm" data-icon="done">done</span> Blindage certifié</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-sm" data-icon="done">done</span> Support Priority 24/7</li>
+</ul>
+<button class="w-full py-4 border border-outline-variant/30 rounded-xl font-bold group-hover:bg-secondary group-hover:text-white transition-all">Choisir Fortress</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials (Editorial Style) -->
+<section class="py-24 px-8 bg-surface-container-low">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<div>
+<h2 class="text-4xl font-bold text-editorial mb-8">Ils nous confient leurs entrées</h2>
+<div class="space-y-12">
+<div class="relative pl-8 border-l-4 border-secondary">
+<p class="text-xl italic mb-4">"DigitalDoor a radicalement changé ma vie d'hôte. Je n'ai plus à stresser quand un vol a 3h de retard. Mes notes de communication ont explosé !"</p>
+<p class="font-bold">— Marc L., Conciergerie de Biarritz</p>
+</div>
+<div class="relative pl-8 border-l-4 border-outline-variant/30">
+<p class="text-xl italic mb-4">"L'installation était super rapide. Le technicien a même pris le temps de m'expliquer comment automatiser les codes avec mon logiciel de gestion."</p>
+<p class="font-bold">— Sarah K., Propriétaire de 3 studios à Paris</p>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="rounded-2xl overflow-hidden h-64">
+<img alt="Villa moderne" class="w-full h-full object-cover" data-alt="modern architectural villa exterior at dusk with warm glowing lights and luxury atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQofAJbvH7ugbmNN6ySJlf8hYFkiO5zy0gcg3dji2CUVq-OgNRWGL8EVqm19p-0VR57sG3cTcDfUQdeWxZmWvMKGWjf1aMn3imDbLu1v69uz0VowlC7Hvxm1j9RHkds1tpmZOH_fFM4c3XRK2o95j1bfyjq4dC3k0WmMUmYsozgap0M6pkhSFuZdiB386A4Cm_er_oyJiBKlFupw6vZL10OTG7g_QknxWr-FDLwNh_HJwT5w__7r6yoYCdmA2rXQg-LzGrQXhrsFAU"/>
+</div>
+<div class="rounded-2xl overflow-hidden h-48 mt-8">
+<img alt="Intérieur moderne" class="w-full h-full object-cover" data-alt="minimalist luxury apartment interior with scandinavian design and natural light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSKfnpJRC3nqX-eUxnuoLH2WgXE7d5wJNz_TL1UKAcXTVHvKYczAXkbh51k1DyecJwti1c-kbMY3zpUQXmmRIhi8L3oF15xEGcw_QialJIe9sMtKSwIS274tgFaOHwJyw2g1BMlTfwhm4tddW1cAn_tI4OAMqexMwH7yP--pcgRV8JdNv9YEgqmMOPER210Hf7QIktiDLDtqW1MiiAvXrWR--8rVbxLG3843j0pzeTyYqCuNqD41xOheKbQg65sjWQKSaevluvsykA"/>
+</div>
+<div class="rounded-2xl overflow-hidden h-48 -mt-8">
+<img alt="Serrure détail" class="w-full h-full object-cover" data-alt="macro shot of a hand using a digital keypad on a luxury door entry system" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWlDSi9yYyNyMvKaKlTAwLkamH8lO_busTfLExewDo2N_CkSqaxhrILe-1XWtaxLnzYtipSNPgLqe6KBLrS7TlfpHr8Cfx1VC_vRvAn5fRhlqd9W044XFV_0_z1lRyJTxZjsVmErS9c8MsOFRdOuzzzaTKw35SAHf2u8EJgaxaSjf76YTbEPMnBVHf-fBEVDIkQducKva2-pum2yfQ2YpsPTsta1dCAA8cINM-L9sfKo3nib8BuUNbP2REjGUG2NIY5ZpKRiLzW4KG"/>
+</div>
+<div class="rounded-2xl overflow-hidden h-64">
+<img alt="Propriétaire souriante" class="w-full h-full object-cover" data-alt="professional woman in a bright modern office smiling confidently looking away from camera" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBC9BSabr9phZKmjjsWonctQ9zI5ZuvTPJBVLkLJQZLP-wQlYVKrPHGhgFN2rZK-Ob3bRfvkbtnbI5H7iwUR2oxXwGmC1yBUgondlGiyDRLOCtx4emAz3aVmDwWk2XyfN9qlIdMb0EptTEttE192zUGH1URgRjy252zafpn9viUbp8Lu91S0m3VGU_AnMfq_i4SUDJ2sL_4wMHdmbXvRJOfwbzb63eCxEXcPQ4MjBZQXMUQoqoxzMg9W4gyKWHY4PqywuKNXanPXPE-"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-24 px-8">
+<div class="max-w-5xl mx-auto signature-gradient rounded-[2rem] p-12 md:p-20 text-center text-white relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-full opacity-10">
+<div class="grid grid-cols-12 gap-4 h-full transform -rotate-12 scale-150">
+<div class="col-span-1 bg-white h-full"></div>
+<div class="col-span-2"></div>
+<div class="col-span-1 bg-white h-full"></div>
+</div>
+</div>
+<div class="relative z-10">
+<h2 class="text-4xl md:text-5xl font-bold text-editorial mb-8 leading-tight">Prêt à passer à l'automatisation ?</h2>
+<p class="text-xl text-on-primary-container mb-12 max-w-2xl mx-auto">Vérifiez gratuitement si votre porte est compatible et recevez votre devis personnalisé en moins de 2 minutes.</p>
+<div class="flex flex-col md:flex-row gap-6 justify-center">
+<button class="bg-secondary-container text-white px-10 py-5 rounded-xl font-bold text-lg hover:scale-[1.05] transition-all shadow-xl">Obtenir mon diagnostic gratuit</button>
+<button class="bg-white/10 backdrop-blur-md text-white border border-white/20 px-10 py-5 rounded-xl font-bold text-lg hover:bg-white/20 transition-all">Parler à un expert</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-50 dark:bg-slate-950 w-full border-t border-slate-200 dark:border-slate-800">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 px-8 py-12 max-w-7xl mx-auto">
+<div class="flex flex-col gap-4">
+<div class="text-xl font-bold text-slate-900 dark:text-slate-100">SecureCurator</div>
+<p class="font-sans text-sm text-slate-500 dark:text-slate-400">Leader français de l'automatisation d'accès pour locations saisonnières.</p>
+</div>
+<div>
+<h5 class="text-slate-900 dark:text-slate-50 font-semibold mb-4">Produit</h5>
+<ul class="flex flex-col gap-2">
+<li><a class="font-sans text-sm text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 hover:underline underline-offset-4 transition-opacity" href="#">Installation Guide</a></li>
+<li><a class="font-sans text-sm text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 hover:underline underline-offset-4 transition-opacity" href="#">Compatibilité</a></li>
+<li><a class="font-sans text-sm text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 hover:underline underline-offset-4 transition-opacity" href="#">Tarifs Packs</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-slate-900 dark:text-slate-50 font-semibold mb-4">Société</h5>
+<ul class="flex flex-col gap-2">
+<li><a class="font-sans text-sm text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 hover:underline underline-offset-4 transition-opacity" href="#">Support</a></li>
+<li><a class="font-sans text-sm text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 hover:underline underline-offset-4 transition-opacity" href="#">Contact</a></li>
+<li><a class="font-sans text-sm text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 hover:underline underline-offset-4 transition-opacity" href="#">Blog</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-slate-900 dark:text-slate-50 font-semibold mb-4">Légal</h5>
+<ul class="flex flex-col gap-2">
+<li><a class="font-sans text-sm text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 hover:underline underline-offset-4 transition-opacity" href="#">Privacy Policy</a></li>
+<li><a class="font-sans text-sm text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 hover:underline underline-offset-4 transition-opacity" href="#">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-8 py-6 border-t border-slate-200 dark:border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-sans text-sm text-slate-500 dark:text-slate-400">© 2024 SecureCurator Smart Automation. All rights reserved.</p>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-slate-400 hover:text-blue-600 cursor-pointer transition-colors" data-icon="facebook">social_leaderboard</span>
+<span class="material-symbols-outlined text-slate-400 hover:text-blue-600 cursor-pointer transition-colors" data-icon="linkedin">link</span>
+</div>
+</div>
+</footer>
+</body></html>

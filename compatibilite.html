@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DigitalDoor | Quiz de compatibilité</title>
+    <meta
+      name="description"
+      content="Vérifiez la compatibilité de votre porte et obtenez une recommandation DigitalDoor avec pack et lock body adaptés."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/styles/styles.css" />
+    <script src="assets/scripts/app.js" defer></script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="container site-header__inner">
+          <a class="logo" href="index.html" aria-label="DigitalDoor">
+            <span class="logo__mark" aria-hidden="true"></span>
+            <span>DigitalDoor</span>
+          </a>
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Ouvrir le menu" data-nav-toggle>
+            <span class="nav-toggle__line"></span>
+          </button>
+          <nav class="site-nav" aria-label="Navigation principale" data-nav>
+            <div class="site-nav__links">
+              <a href="index.html">Accueil</a>
+              <a href="serrures.html">Serrures</a>
+              <a href="packs.html">Packs</a>
+              <a href="compatibilite.html" aria-current="page">Compatibilité</a>
+              <a href="index.html#faq">FAQ</a>
+              <a href="index.html#contact">Contact</a>
+            </div>
+            <div class="site-nav__actions">
+              <a class="button button--ghost button--small" href="serrures.html">Voir la gamme</a>
+              <a class="button button--primary button--small" href="#quiz">Lancer le quiz</a>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <section class="page-hero">
+          <div class="container page-hero__grid">
+            <div data-reveal>
+              <span class="eyebrow">Préqualification de porte</span>
+              <h1>Trouvez le bon pack et le bon lock body en 6 étapes.</h1>
+              <p class="lede">
+                En pratique, il faut surtout valider le type de porte, le mécanisme actuel,
+                l’épaisseur et votre volume à équiper. Le résultat vous donne une recommandation cohérente.
+              </p>
+              <div class="cluster">
+                <a class="button button--primary" href="#quiz">Démarrer</a>
+                <a class="button button--ghost" href="mailto:bonjour@digitaldoor.fr">Poser une question</a>
+              </div>
+            </div>
+
+            <div class="panel-stage" data-reveal>
+              <div class="panel-stage__visual">
+                <img src="assets/images/Optional lock body.png" alt="Lock bodies DigitalDoor" />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="quiz">
+          <div class="container" data-compatibility-quiz>
+            <div class="quiz-layout">
+              <div class="quiz-shell" data-reveal>
+                <div class="quiz-progress">
+                  <div class="quiz-progress__row">
+                    <div>
+                      <span class="eyebrow">Quiz de compatibilité</span>
+                      <h2 style="margin: 0.45rem 0 0; font-family: 'Space Grotesk', sans-serif; font-size: 1.8rem; letter-spacing: -0.05em;">
+                        Quelle configuration pour votre porte ?
+                      </h2>
+                    </div>
+                    <div class="meta-text"><span data-quiz-current>1</span> / <span data-quiz-total>6</span></div>
+                  </div>
+                  <div class="quiz-progress__bar">
+                    <div class="quiz-progress__fill" data-quiz-fill style="width: 16.666%;"></div>
+                  </div>
+                </div>
+
+                <div data-step data-field="doorType">
+                  <div class="quiz-step is-active">
+                    <span class="eyebrow">Étape 1</span>
+                    <h2>Quel est votre type de porte ?</h2>
+                    <p>Choisissez la matière ou la construction la plus proche de votre porte actuelle.</p>
+                    <div class="quiz-options">
+                      <label class="quiz-option">
+                        <input type="radio" name="doorType" value="bois" />
+                        <span class="quiz-option__body">
+                          <span class="quiz-option__dot"></span>
+                          <span><strong>Bois</strong><span>Porte d’appartement ou intérieure renforcée.</span></span>
+                        </span>
+                      </label>
+                      <label class="quiz-option">
+                        <input type="radio" name="doorType" value="metal" />
+                        <span class="quiz-option__body">
+                          <span class="quiz-option__dot"></span>
+                          <span><strong>Métal</strong><span>Porte technique, sécurisée ou métallique standard.</span></span>
+                        </span>
+                      </label>
+                      <label class="quiz-option">
+                        <input type="radio" name="doorType" value="pvc" />
+                        <span class="quiz-option__body">
+                          <span class="quiz-option__dot"></span>
+                          <span><strong>PVC</strong><span>Menuiserie plus fine, souvent en maison ou dépendance.</span></span>
+                        </span>
+                      </label>
+                      <label class="quiz-option">
+                        <input type="radio" name="doorType" value="blindee" />
+                        <span class="quiz-option__body">
+                          <span class="quiz-option__dot"></span>
+                          <span><strong>Blindée</strong><span>Porte lourde, épaisse ou sécurisée multipoints.</span></span>
+                        </span>
+                      </label>
+                      <label class="quiz-option">
+                        <input type="radio" name="doorType" value="alu-vitree" />
+                        <span class="quiz-option__body">
+                          <span class="quiz-option__dot"></span>
+                          <span><strong>Alu / vitrée</strong><span>Porte fine ou cadre aluminium, parfois vitré.</span></span>
+                        </span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+                <div data-step data-field="lockType">
+                  <div class="quiz-step">
+                    <span class="eyebrow">Étape 2</span>
+                    <h2>Quel type de serrure avez-vous aujourd’hui ?</h2>
+                    <p>C’est ce qui permet d’orienter le mécanisme interne sans partir à l’aveugle.</p>
+                    <div class="quiz-options">
+                      <label class="quiz-option">
+                        <input type="radio" name="lockType" value="europeen" />
+                        <span class="quiz-option__body">
+                          <span class="quiz-option__dot"></span>
+                          <span><strong>Cylindre européen</strong><span>Le cas le plus fréquent sur appartement standard.</span></span>
+                        </span>
+                      </label>
+                      <label class="quiz-option">
+                        <input type="radio" name="lockType" value="verrou" />
+                        <span class="quiz-option__body">
+                          <span class="quiz-option__dot"></span>
+                          <span><strong>Verrou simple</strong><span>Configuration ancienne ou plus légère.</span></span>
+                        </span>
+                      </label>
+                      <label class="quiz-option">
+                        <input type="radio" name="lockType" value="multipoints" />
+                        <span class="quiz-option__body">
+                          <span class="quiz-option__dot"></span>
+                          <span><strong>Multipoints 3 ou 5 points</strong><span>Cas fréquent sur porte blindée ou renforcée.</span></span>
+                        </span>
+                      </label>
+                      <label class="quiz-option">
+                        <input type="radio" name="lockType" value="unknown" />
+                        <span class="quiz-option__body">
+                          <span class="quiz-option__dot"></span>
+                          <span><strong>Je ne sais pas</strong><span>Le technicien confirmera au diagnostic.</span></span>
+                        </span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+                <div data-step data-field="thickness">
+                  <div class="quiz-step">
+                    <span class="eyebrow">Étape 3</span>
+                    <h2>Quelle est l’épaisseur de la porte ?</h2>
+                    <p>Indiquez une mesure approximative. Elle sert à évaluer le kit et le lock body adaptés.</p>
+                    <div class="range-block">
+                      <input data-range-input type="range" min="35" max="120" step="1" value="45" />
+                      <div class="range-display"><span data-range-value>45</span><span style="font-size: 1.2rem;">mm</span></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div data-step data-field="wifi">
+                  <div class="quiz-step">
+                    <span class="eyebrow">Étape 4</span>
+                    <h2>Y a-t-il du Wi-Fi à proximité ?</h2>
+                    <p>Le Wi-Fi n’est pas toujours obligatoire, mais il change la qualité du pilotage à distance.</p>
+                    <div class="quiz-options">
+                      <label class="quiz-option">
+                        <input type="radio" name="wifi" value="yes" />
+                        <span class="quiz-option__body">
+                          <span class="quiz-option__dot"></span>
+                          <span><strong>Oui</strong><span>Réseau disponible à portée de la porte.</span></span>
+                        </span>
+                      </label>
+                      <label class="quiz-option">
+                        <input type="radio" name="wifi" value="no" />
+                        <span class="quiz-option__body">
+                          <span class="quiz-option__dot"></span>
+                          <span><strong>Non</strong><span>Pas de Wi-Fi stable à proximité immédiate.</span></span>
+                        </span>
+                      </label>
+                      <label class="quiz-option">
+                        <input type="radio" name="wifi" value="unknown" />
+                        <span class="quiz-option__body">
+                          <span class="quiz-option__dot"></span>
+                          <span><strong>Je ne sais pas</strong><span>À vérifier pendant le diagnostic ou sur site.</span></span>
+                        </span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+                <div data-step data-field="doors">
+                  <div class="quiz-step">
+                    <span class="eyebrow">Étape 5</span>
+                    <h2>Combien de portes voulez-vous équiper ?</h2>
+                    <p>Le volume change la logique de pack, de support et de déploiement.</p>
+                    <div class="quiz-options">
+                      <label class="quiz-option">
+                        <input type="radio" name="doors" value="1" />
+                        <span class="quiz-option__body">
+                          <span class="quiz-option__dot"></span>
+                          <span><strong>1 porte</strong><span>Un bien unique ou un premier test.</span></span>
+                        </span>
+                      </label>
+                      <label class="quiz-option">
+                        <input type="radio" name="doors" value="2-5" />
+                        <span class="quiz-option__body">
+                          <span class="quiz-option__dot"></span>
+                          <span><strong>2 à 5 portes</strong><span>Petit parc ou premiers investissements.</span></span>
+                        </span>
+                      </label>
+                      <label class="quiz-option">
+                        <input type="radio" name="doors" value="6-10" />
+                        <span class="quiz-option__body">
+                          <span class="quiz-option__dot"></span>
+                          <span><strong>6 à 10 portes</strong><span>Besoin plus structuré, logique investisseur.</span></span>
+                        </span>
+                      </label>
+                      <label class="quiz-option">
+                        <input type="radio" name="doors" value="11+" />
+                        <span class="quiz-option__body">
+                          <span class="quiz-option__dot"></span>
+                          <span><strong>11+ portes</strong><span>Déploiement dédié, devis et planning spécifiques.</span></span>
+                        </span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+                <div data-step data-field="platforms">
+                  <div class="quiz-step">
+                    <span class="eyebrow">Étape 6</span>
+                    <h2>Quelle plateforme utilisez-vous ?</h2>
+                    <p>Plus l’exploitation est multicanale, plus il faut cadrer l’automatisation en amont.</p>
+                    <div class="quiz-options">
+                      <label class="quiz-option">
+                        <input type="radio" name="platforms" value="airbnb" />
+                        <span class="quiz-option__body">
+                          <span class="quiz-option__dot"></span>
+                          <span><strong>Airbnb</strong><span>Le cas le plus simple pour démarrer.</span></span>
+                        </span>
+                      </label>
+                      <label class="quiz-option">
+                        <input type="radio" name="platforms" value="booking" />
+                        <span class="quiz-option__body">
+                          <span class="quiz-option__dot"></span>
+                          <span><strong>Booking</strong><span>Exploitation mono-canal hors Airbnb.</span></span>
+                        </span>
+                      </label>
+                      <label class="quiz-option">
+                        <input type="radio" name="platforms" value="abritel" />
+                        <span class="quiz-option__body">
+                          <span class="quiz-option__dot"></span>
+                          <span><strong>Abritel / VRBO</strong><span>Location saisonnière avec flux distinct.</span></span>
+                        </span>
+                      </label>
+                      <label class="quiz-option">
+                        <input type="radio" name="platforms" value="plusieurs" />
+                        <span class="quiz-option__body">
+                          <span class="quiz-option__dot"></span>
+                          <span><strong>Plusieurs plateformes</strong><span>Airbnb + Booking + PMS ou équivalent.</span></span>
+                        </span>
+                      </label>
+                      <label class="quiz-option">
+                        <input type="radio" name="platforms" value="autre" />
+                        <span class="quiz-option__body">
+                          <span class="quiz-option__dot"></span>
+                          <span><strong>Autre</strong><span>Besoin à préciser avec l’équipe DigitalDoor.</span></span>
+                        </span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="quiz-actions">
+                  <button class="button button--ghost" type="button" data-quiz-prev>Précédent</button>
+                  <button class="button button--primary" type="button" data-quiz-next>Continuer</button>
+                </div>
+              </div>
+
+              <aside class="quiz-aside">
+                <div class="product-panel" data-reveal>
+                  <strong data-quiz-hint-title>Pourquoi le type de porte compte</strong>
+                  <span data-quiz-hint-text>
+                    Une porte blindée ou multipoints ne s’équipe pas comme une porte d’appartement standard.
+                  </span>
+                </div>
+                <div class="product-panel" data-reveal>
+                  <strong>Le standard le plus fréquent</strong>
+                  <span>La série 85, réf. 1407, reste le choix recommandé pour environ 80% des portes d’appartement françaises.</span>
+                </div>
+                <div class="product-panel" data-reveal>
+                  <strong>Photo de la tranche de porte</strong>
+                  <span>En cas de doute, une photo de la serrure actuelle suffit généralement à confirmer le mécanisme avant intervention.</span>
+                </div>
+              </aside>
+            </div>
+
+            <div class="section section--tight" style="padding-bottom: 0;">
+              <div class="result-card" hidden data-quiz-result>
+                <div class="result-card__header">
+                  <div>
+                    <span class="eyebrow">Recommandation DigitalDoor</span>
+                    <h2 style="margin: 0.5rem 0 0; font-family: 'Space Grotesk', sans-serif; font-size: 2.5rem; letter-spacing: -0.06em;">
+                      <span data-result-pack>Pack Business</span>
+                    </h2>
+                    <p class="lede" data-result-summary style="margin-top: 1rem;"></p>
+                  </div>
+                  <div class="result-card__price" data-result-price>449 €</div>
+                </div>
+
+                <div class="result-card__visual">
+                  <img src="assets/images/104-camera.png" alt="" data-result-image />
+                </div>
+
+                <div class="pricing-note">
+                  <div class="mini-panel">
+                    <strong>Produit recommandé</strong>
+                    <span data-result-product>DigitalDoor PRO Camera</span>
+                  </div>
+                  <div class="mini-panel">
+                    <strong>Lock body conseillé</strong>
+                    <span data-result-lock-body>Série 85 · réf. 1407</span>
+                  </div>
+                  <div class="mini-panel">
+                    <strong>Ce qui est inclus</strong>
+                    <span data-result-tech>Installation technicien + automatisation.</span>
+                  </div>
+                </div>
+
+                <ul class="feature-list" data-result-reasons style="margin-top: 1.5rem;"></ul>
+
+                <div class="cluster">
+                  <a class="button button--primary" href="mailto:bonjour@digitaldoor.fr?subject=Diagnostic%20DigitalDoor">Réserver mon diagnostic</a>
+                  <a class="button button--dark-ghost" href="packs.html">Voir le détail des packs</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="footer-grid">
+            <div>
+              <a class="logo" href="index.html">
+                <span class="logo__mark" aria-hidden="true"></span>
+                <span>DigitalDoor</span>
+              </a>
+              <p class="lede">
+                Un quiz simple pour préqualifier rapidement la porte avant échange avec l’équipe.
+              </p>
+            </div>
+            <div>
+              <h4>Navigation</h4>
+              <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="serrures.html">Serrures</a></li>
+                <li><a href="packs.html">Packs</a></li>
+                <li><a href="compatibilite.html">Compatibilité</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4>Diagnostic</h4>
+              <ul>
+                <li><a href="#quiz">Lancer le quiz</a></li>
+                <li><a href="mailto:bonjour@digitaldoor.fr">Envoyer une photo</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4>Produit</h4>
+              <ul>
+                <li><a href="serrures.html">Catalogue</a></li>
+                <li><a href="packs.html">Tarifs</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4>Contact</h4>
+              <ul>
+                <li><a href="mailto:bonjour@digitaldoor.fr">bonjour@digitaldoor.fr</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-meta">© <span id="year"></span> DigitalDoor.</div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

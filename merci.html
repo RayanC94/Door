@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DigitalDoor | Merci</title>
+    <meta
+      name="description"
+      content="Confirmation d'envoi du formulaire DigitalDoor."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/styles/styles.css" />
+    <script src="assets/scripts/app.js" defer></script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="container site-header__inner">
+          <a class="logo" href="index.html" aria-label="DigitalDoor">
+            <span class="logo__mark" aria-hidden="true"></span>
+            <span>DigitalDoor</span>
+          </a>
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Ouvrir le menu" data-nav-toggle>
+            <span class="nav-toggle__line"></span>
+          </button>
+          <nav class="site-nav" aria-label="Navigation principale" data-nav>
+            <div class="site-nav__links">
+              <a href="index.html">Accueil</a>
+              <a href="serrures.html">Serrures</a>
+              <a href="packs.html">Packs</a>
+              <a href="compatibilite.html">Compatibilité</a>
+            </div>
+            <div class="site-nav__actions">
+              <a class="button button--primary button--small" href="index.html#contact">Retour au site</a>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <section class="page-hero">
+          <div class="container">
+            <div class="contact-shell" data-reveal>
+              <div class="contact-shell__intro">
+                <span class="eyebrow">Message envoyé</span>
+                <h1>Merci, votre demande a bien été transmise.</h1>
+                <p class="lede">
+                  Si le formulaire est hébergé sur Netlify, la demande est maintenant
+                  enregistrée dans l’onglet Forms. Vous pouvez revenir au site, relancer
+                  un diagnostic ou consulter les packs.
+                </p>
+                <div class="hero-actions">
+                  <a class="button button--primary" href="index.html">Retour à l’accueil</a>
+                  <a class="button button--dark-ghost" href="packs.html">Voir les packs</a>
+                </div>
+              </div>
+
+              <div class="contact-points">
+                <div class="contact-point">
+                  <strong>Contact direct</strong>
+                  <span>bonjour@digitaldoor.fr</span>
+                </div>
+                <div class="contact-point">
+                  <strong>Étape suivante</strong>
+                  <span>Valider la compatibilité, le lock body et le pack adapté.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="footer-meta">© <span id="year"></span> DigitalDoor.</div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

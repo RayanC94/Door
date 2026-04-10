@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DigitalDoor | Serrures connectées pour locations courte durée</title>
+    <meta
+      name="description"
+      content="Automatisez l'accès à vos locations courte durée avec des serrures connectées installées et configurées pour Airbnb, Booking et Abritel."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/styles/styles.css" />
+    <script src="assets/scripts/app.js" defer></script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="container site-header__inner">
+          <a class="logo" href="index.html" aria-label="DigitalDoor">
+            <span class="logo__mark" aria-hidden="true"></span>
+            <span>DigitalDoor</span>
+          </a>
+
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Ouvrir le menu" data-nav-toggle>
+            <span class="nav-toggle__line"></span>
+          </button>
+
+          <nav class="site-nav" aria-label="Navigation principale" data-nav>
+            <div class="site-nav__links">
+              <a href="index.html" aria-current="page">Accueil</a>
+              <a href="serrures.html">Serrures</a>
+              <a href="packs.html">Packs</a>
+              <a href="compatibilite.html">Compatibilité</a>
+              <a href="index.html#faq">FAQ</a>
+              <a href="index.html#contact">Contact</a>
+            </div>
+            <div class="site-nav__actions">
+              <a class="button button--ghost button--small" href="serrures.html">Voir les modèles</a>
+              <a class="button button--primary button--small" href="compatibilite.html">Diagnostic gratuit</a>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero">
+          <div class="container hero-grid">
+            <div data-reveal>
+              <span class="eyebrow">Automatisation d’accès clé-en-main</span>
+              <h1>Vos voyageurs entrent. Vous ne bougez pas.</h1>
+              <p>
+                Serrures connectées installées et configurées pour vos Airbnb.
+                Codes automatiques, accès sécurisé, zéro clé, zéro remise à 23h.
+              </p>
+              <div class="hero-actions">
+                <a class="button button--primary" href="packs.html">Découvrir les packs</a>
+                <a class="button button--ghost" href="compatibilite.html">Diagnostic gratuit 15 min</a>
+              </div>
+              <div class="hero-notes">
+                <span>Installation pro en 1h</span>
+                <span>TTLock et Tuya</span>
+                <span>Compatible Airbnb, Booking, Abritel</span>
+              </div>
+            </div>
+
+            <div class="hero-stage" data-reveal>
+              <div class="hero-stage__grid">
+                <div class="hero-orbit" aria-hidden="true"></div>
+                <div class="device-stack">
+                  <img
+                    class="hero-device hero-device--main"
+                    src="assets/images/113.png"
+                    alt="DigitalDoor FORTRESS"
+                  />
+                  <img
+                    class="hero-device hero-device--secondary"
+                    src="assets/images/102.png"
+                    alt="DigitalDoor ACCESS"
+                  />
+                </div>
+                <div class="hero-chip hero-chip--arrival">
+                  <strong>Code check-in envoyé</strong>
+                  <span>Réservation Airbnb • Appartement Montorgueil</span>
+                </div>
+                <div class="hero-chip hero-chip--stat">
+                  <strong>Check-in autonome actif</strong>
+                  <span>Porte déverrouillée • fermeture auto dans 8 s</span>
+                </div>
+                <div class="hero-chip hero-chip--owner">
+                  <strong>Notification propriétaire</strong>
+                  <span>“Votre voyageur est arrivé”</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section section--tight">
+          <div class="container data-strip">
+            <div class="data-strip__item" data-reveal>
+              <strong>4.95/5</strong>
+              <span>note moyenne de check-in autonome</span>
+            </div>
+            <div class="data-strip__item" data-reveal>
+              <strong>1 h</strong>
+              <span>pour poser et configurer une porte standard</span>
+            </div>
+            <div class="data-strip__item" data-reveal>
+              <strong>80%</strong>
+              <span>des portes françaises couvertes par le lock body 85</span>
+            </div>
+            <div class="data-strip__item" data-reveal>
+              <strong>0 clé</strong>
+              <span>à remettre, récupérer, dupliquer ou perdre</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="container problem-grid">
+            <div data-reveal>
+              <span class="eyebrow">Le vrai problème</span>
+              <h2 class="problem-statement">
+                Remise de clés à 23h. Clés perdues. Voyageur bloqué. Code non transmis.
+              </h2>
+              <p class="lede">
+                Vous connaissez déjà la friction. DigitalDoor n’est pas une conciergerie :
+                on supprime le problème d’accès à la source, avec une installation propre,
+                un bon mécanisme et une automatisation complète.
+              </p>
+              <div class="pain-list">
+                <div class="pain-list__item">
+                  <strong>Plus de dépendance géographique</strong>
+                  <span>Plus besoin d’être à proximité pour chaque arrivée, retard ou oubli.</span>
+                </div>
+                <div class="pain-list__item">
+                  <strong>Une vraie expérience premium</strong>
+                  <span>Le voyageur tape son code, la porte s’ouvre, le séjour démarre sans friction.</span>
+                </div>
+                <div class="pain-list__item">
+                  <strong>Un historique clair</strong>
+                  <span>Chaque accès est tracé. Les codes ménage et maintenance sont temporisés.</span>
+                </div>
+              </div>
+            </div>
+
+            <div data-reveal>
+              <div class="quote-stat">
+                <span class="eyebrow">Donnée de réassurance</span>
+                <span class="quote-stat__number">4.95/5</span>
+                <p>
+                  Les annonces avec check-in autonome obtiennent en moyenne une meilleure
+                  note d’arrivée. C’est un gain opérationnel, mais aussi un gain d’expérience
+                  pour le voyageur.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section section--dark">
+          <div class="container">
+            <div class="section-heading" data-reveal>
+              <span class="eyebrow">Le process</span>
+              <h2>Trois étapes, puis l’accès tourne tout seul.</h2>
+              <p>
+                DigitalDoor prend la main sur le diagnostic, l’installation et la
+                configuration. Ensuite, chaque réservation génère son propre accès.
+              </p>
+            </div>
+
+            <div class="steps">
+              <article class="step" data-reveal>
+                <span class="step__number">01</span>
+                <h3>On diagnostique</h3>
+                <p>
+                  Un appel de 15 min suffit. On identifie votre porte, votre volume
+                  de logements, votre budget et le bon lock body.
+                </p>
+              </article>
+              <article class="step" data-reveal>
+                <span class="step__number">02</span>
+                <h3>On installe</h3>
+                <p>
+                  Notre technicien se déplace, pose la serrure et la configure avec
+                  TTLock ou Tuya. La porte est connectée en moins d’une heure.
+                </p>
+              </article>
+              <article class="step" data-reveal>
+                <span class="step__number">03</span>
+                <h3>C’est automatique</h3>
+                <p>
+                  Chaque réservation déclenche un code, l’envoi au voyageur et
+                  l’expiration au checkout. Vous ne faites rien.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="container">
+            <div class="section-heading" data-reveal>
+              <span class="eyebrow">La gamme</span>
+              <h2>Trois serrures, trois niveaux de sérénité.</h2>
+              <p>
+                La gamme DigitalDoor couvre l’appartement simple, la location premium
+                et le parc multi-biens. Le modèle PRO Camera reste le plus demandé.
+              </p>
+            </div>
+
+            <div class="showcase-grid">
+              <article class="showcase-lock showcase-lock--featured" data-reveal>
+                <div class="showcase-lock__top">
+                  <span class="pill">Le plus populaire</span>
+                  <span class="showcase-lock__meta">Pack Business installé · 449 €</span>
+                </div>
+
+                <div class="showcase-lock__content">
+                  <div class="showcase-lock__copy">
+                    <h3>DigitalDoor PRO Camera</h3>
+                    <p class="meta-text">
+                      Le best-seller. Caméra judas HD, reconnaissance faciale 3D
+                      et meilleure maîtrise des flux voyageurs, sans basculer sur
+                      une logique Enterprise.
+                    </p>
+                    <ul class="feature-list">
+                      <li>Caméra HD, gestion visuelle de l’entrée depuis l’app</li>
+                      <li>Disponible en version Basics, Facial ou Camera</li>
+                      <li>Idéal pour T3+, logements familiaux et locations haut de gamme</li>
+                    </ul>
+                    <div class="cluster">
+                      <a class="button button--dark-ghost button--small" href="serrures.html#pro">Voir la fiche complète</a>
+                    </div>
+                  </div>
+
+                  <div class="showcase-lock__media showcase-lock__media--featured">
+                    <img src="assets/images/104.png" alt="DigitalDoor PRO Camera" />
+                  </div>
+                </div>
+
+                <div class="showcase-lock__facts">
+                  <div class="showcase-fact">
+                    <strong>3 versions</strong>
+                    <span>Basics, Facial, Camera</span>
+                  </div>
+                  <div class="showcase-fact">
+                    <strong>200 + 50</strong>
+                    <span>accès et visages enregistrables</span>
+                  </div>
+                  <div class="showcase-fact">
+                    <strong>40 à 120 mm</strong>
+                    <span>épaisseur de porte couverte</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="showcase-lock showcase-lock--support" data-reveal>
+                <div class="showcase-lock__copy">
+                  <span class="pill">ACCESS · 0102</span>
+                  <h3>DigitalDoor ACCESS</h3>
+                  <p class="meta-text">
+                    L’entrée de gamme fiable et discrète pour démarrer sur une porte standard.
+                  </p>
+                  <div class="price-line">
+                    <strong>299 €</strong>
+                    <span>Pack Starter installé</span>
+                  </div>
+                  <ul class="feature-list">
+                    <li>Code, empreinte, badge, clé et mot de passe temporaire</li>
+                    <li>Semi-automatique avec autonomie d’environ 12 mois</li>
+                  </ul>
+                </div>
+                <div class="showcase-lock__media showcase-lock__media--support">
+                  <img src="assets/images/102.png" alt="DigitalDoor ACCESS" />
+                </div>
+              </article>
+
+              <article class="showcase-lock showcase-lock--support showcase-lock--support-dark" data-reveal>
+                <div class="showcase-lock__copy">
+                  <span class="pill">FORTRESS · 0113</span>
+                  <h3>DigitalDoor FORTRESS</h3>
+                  <p class="meta-text">
+                    Le full automatique pensé pour les villas, conciergeries et parcs multi-biens.
+                  </p>
+                  <div class="price-line">
+                    <strong>699 €</strong>
+                    <span>Pack Enterprise installé</span>
+                  </div>
+                  <ul class="feature-list">
+                    <li>Ouverture full automatique et double batterie</li>
+                    <li>Conçu pour portes épaisses, blindées ou usage intensif</li>
+                  </ul>
+                </div>
+                <div class="showcase-lock__media showcase-lock__media--support">
+                  <img src="assets/images/113.png" alt="DigitalDoor FORTRESS" />
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section section--light" id="packs">
+          <div class="container">
+            <div class="section-heading" data-reveal>
+              <span class="eyebrow">Les packs</span>
+              <h2>Une offre tout-compris, du modèle solo au parc investisseur.</h2>
+              <p>
+                Chaque pack inclut la serrure, le lock body standard 85, l’installation
+                technicien, la configuration TTLock ou Tuya et l’automatisation des accès.
+              </p>
+            </div>
+
+            <div class="pricing-grid">
+              <article class="pricing-card" data-reveal>
+                <h3>Pack Starter</h3>
+                <div class="price-line">
+                  <strong>299 €</strong>
+                  <span>1 porte</span>
+                </div>
+                <ul class="pack-list">
+                  <li>DigitalDoor ACCESS + lock body 85</li>
+                  <li>Installation technicien et configuration Wi-Fi</li>
+                  <li>Automatisation check-in de base</li>
+                  <li>Support 3 mois</li>
+                </ul>
+                <div class="pricing-footer">
+                  <span class="lock-meta">10 portes : 249 € / porte</span>
+                  <a class="button button--ghost button--small" href="packs.html#starter">Choisir ce pack</a>
+                </div>
+              </article>
+
+              <article class="pricing-card pricing-card--featured" data-reveal>
+                <span class="pricing-card__badge pill">Recommandé</span>
+                <h3>Pack Business</h3>
+                <div class="price-line">
+                  <strong>449 €</strong>
+                  <span>1 porte</span>
+                </div>
+                <ul class="pack-list">
+                  <li>DigitalDoor PRO Camera + installation complète</li>
+                  <li>Codes prestataires et scénarios d’accès plus riches</li>
+                  <li>Support 6 mois et configuration avancée</li>
+                  <li>Meilleur compromis sécurité / confort / budget</li>
+                </ul>
+                <div class="pricing-footer">
+                  <span class="lock-meta">10 portes : 349 € / porte</span>
+                  <a class="button button--dark-ghost button--small" href="packs.html#business">Choisir ce pack</a>
+                </div>
+              </article>
+
+              <article class="pricing-card" data-reveal>
+                <h3>Pack Enterprise</h3>
+                <div class="price-line">
+                  <strong>699 €</strong>
+                  <span>1 porte</span>
+                </div>
+                <ul class="pack-list">
+                  <li>DigitalDoor FORTRESS + lock body adapté</li>
+                  <li>Dashboard multi-propriétés et support 12 mois</li>
+                  <li>Maintenance annuelle incluse</li>
+                  <li>Approche déploiement investisseur ou conciergerie</li>
+                </ul>
+                <div class="pricing-footer">
+                  <span class="lock-meta">10 portes : 549 € / porte</span>
+                  <a class="button button--ghost button--small" href="packs.html#enterprise">Choisir ce pack</a>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="container">
+            <div class="section-heading" data-reveal>
+              <span class="eyebrow">Comment ça tourne</span>
+              <h2>Le check-in autonome en cinq mouvements.</h2>
+              <p>
+                L’automatisation DigitalDoor se cale sur votre calendrier de réservation,
+                en gardant la main sur les voyageurs comme sur les prestataires.
+              </p>
+            </div>
+
+            <div class="flow-grid">
+              <div class="flow-step" data-reveal>
+                <small>01</small>
+                <strong>Réservation reçue</strong>
+                <span>Airbnb, Booking, Abritel ou PMS connecté.</span>
+              </div>
+              <div class="flow-step" data-reveal>
+                <small>02</small>
+                <strong>Code généré</strong>
+                <span>Un accès unique est créé pour le séjour exact.</span>
+              </div>
+              <div class="flow-step" data-reveal>
+                <small>03</small>
+                <strong>Envoi automatique</strong>
+                <span>Message Airbnb, SMS ou e-mail selon la configuration.</span>
+              </div>
+              <div class="flow-step" data-reveal>
+                <small>04</small>
+                <strong>Porte ouverte</strong>
+                <span>Le voyageur entre sans remise de clés ni appel.</span>
+              </div>
+              <div class="flow-step" data-reveal>
+                <small>05</small>
+                <strong>Code expiré</strong>
+                <span>Le checkout clôt l’accès, puis le code ménage prend le relais.</span>
+              </div>
+            </div>
+
+            <p class="flow-note" data-reveal>
+              Les alertes batterie, les tentatives d’accès et les statuts de porte remontent
+              aussi dans l’app, avec journal d’accès horodaté.
+            </p>
+          </div>
+        </section>
+
+        <section class="section section--light">
+          <div class="container">
+            <div class="section-heading" data-reveal>
+              <span class="eyebrow">Réassurance</span>
+              <h2>Ce que DigitalDoor enlève du quotidien.</h2>
+              <p>
+                L’intérêt n’est pas juste la serrure, mais le système complet autour :
+                diagnostic, lock body, installation, support et adaptation au marché français.
+              </p>
+            </div>
+
+            <div class="trust-grid">
+              <div class="trust-item" data-reveal>
+                <strong>Garantie 30 jours</strong>
+                <span>Reconfiguration gratuite si le système ne convient pas au premier montage.</span>
+              </div>
+              <div class="trust-item" data-reveal>
+                <strong>Techniciens formés au marché FR</strong>
+                <span>Cylindre européen, multipoints, portes blindées, Vigik, Intratone.</span>
+              </div>
+              <div class="trust-item" data-reveal>
+                <strong>Compatible copropriété</strong>
+                <span>Installation en partie privative, sans modifier les parties communes.</span>
+              </div>
+              <div class="trust-item" data-reveal>
+                <strong>RGPD et données voyageurs</strong>
+                <span>Les flux passent par les plateformes officielles, sans base propriétaire opaque.</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="container">
+            <div class="section-heading" data-reveal>
+              <span class="eyebrow">Témoignages</span>
+              <h2>Des propriétaires qui veulent surtout ne plus gérer les clés.</h2>
+            </div>
+
+            <div class="testimonial-grid">
+              <article class="quote-card" data-reveal>
+                <p>
+                  “J’ai arrêté les arrivées tardives et les appels de dernière minute.
+                  Le gain n’est pas seulement le temps, c’est la tranquillité.”
+                </p>
+                <footer>
+                  <strong>Claire D.</strong>
+                  <span>3 appartements · Paris 11</span>
+                </footer>
+              </article>
+
+              <article class="quote-card" data-reveal>
+                <p>
+                  “Le PRO Camera nous a rassurés dès les premières locations.
+                  On voit qui est devant la porte et les codes prestataires sont cadrés.”
+                </p>
+                <footer>
+                  <strong>Walid M.</strong>
+                  <span>8 logements · Lille</span>
+                </footer>
+              </article>
+
+              <article class="quote-card" data-reveal>
+                <p>
+                  “Sur un parc plus large, la standardisation change tout.
+                  Même lock body, même méthode, même automatisation.”
+                </p>
+                <footer>
+                  <strong>Julie &amp; Nathan</strong>
+                  <span>Conciergerie · 14 biens</span>
+                </footer>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section section--tight" id="faq">
+          <div class="container">
+            <div class="section-heading" data-reveal>
+              <span class="eyebrow">FAQ</span>
+              <h2>Les questions qui reviennent avant d’équiper une porte.</h2>
+            </div>
+
+            <div class="faq-grid">
+              <article class="faq-item" data-faq-item data-reveal>
+                <button class="faq-button" type="button" aria-expanded="false" data-faq-button>
+                  <span>Est-ce compatible avec ma porte ?</span>
+                  <span>+</span>
+                </button>
+                <div class="faq-panel" data-faq-panel>
+                  <div class="faq-panel__inner">
+                    Oui dans beaucoup de cas. Le lock body 85 couvre la majorité des
+                    portes d’appartement françaises, et les séries 72, 6068 ou 50 prennent
+                    le relais pour les autres configurations.
+                  </div>
+                </div>
+              </article>
+
+              <article class="faq-item" data-faq-item data-reveal>
+                <button class="faq-button" type="button" aria-expanded="false" data-faq-button>
+                  <span>Faut-il un abonnement ?</span>
+                  <span>+</span>
+                </button>
+                <div class="faq-panel" data-faq-panel>
+                  <div class="faq-panel__inner">
+                    Non. Les packs fonctionnent sans abonnement obligatoire. Les offres
+                    Sérénité, Pilotage et Fleet servent uniquement à prolonger le suivi.
+                  </div>
+                </div>
+              </article>
+
+              <article class="faq-item" data-faq-item data-reveal>
+                <button class="faq-button" type="button" aria-expanded="false" data-faq-button>
+                  <span>Que se passe-t-il si la batterie est à plat ?</span>
+                  <span>+</span>
+                </button>
+                <div class="faq-panel" data-faq-panel>
+                  <div class="faq-panel__inner">
+                    Des alertes remontent avant ce point. En secours, les modèles gardent
+                    une alimentation USB d’appoint et une clé physique.
+                  </div>
+                </div>
+              </article>
+
+              <article class="faq-item" data-faq-item data-reveal>
+                <button class="faq-button" type="button" aria-expanded="false" data-faq-button>
+                  <span>Ça fonctionne avec Booking aussi ?</span>
+                  <span>+</span>
+                </button>
+                <div class="faq-panel" data-faq-panel>
+                  <div class="faq-panel__inner">
+                    Oui. Le brief prévoit Airbnb, Booking, Abritel et plusieurs PMS comme
+                    Hospitable, Guesty, Lodgify, Beds24, Hostaway et Smoobu.
+                  </div>
+                </div>
+              </article>
+
+              <article class="faq-item" data-faq-item data-reveal>
+                <button class="faq-button" type="button" aria-expanded="false" data-faq-button>
+                  <span>En combien de temps êtes-vous installés ?</span>
+                  <span>+</span>
+                </button>
+                <div class="faq-panel" data-faq-panel>
+                  <div class="faq-panel__inner">
+                    Une porte standard se pose et se configure en environ 1 heure après
+                    validation du diagnostic et choix du bon mécanisme.
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="contact">
+          <div class="container">
+            <div class="contact-shell" data-reveal>
+              <div class="contact-shell__intro">
+                <span class="eyebrow">Dernière étape</span>
+                <h2>Un vrai formulaire, directement exploitable sur Netlify.</h2>
+                <p class="lede">
+                  Décris ton besoin, le nombre de portes, la plateforme utilisée et
+                  le type d’installation voulu. Une fois le site déployé sur Netlify,
+                  les messages arrivent dans l’onglet Forms sans backend à développer.
+                </p>
+                <div class="contact-points">
+                  <div class="contact-point">
+                    <strong>Réponse attendue</strong>
+                    <span>Demande de diagnostic, devis solo ou parc investisseur.</span>
+                  </div>
+                  <div class="contact-point">
+                    <strong>Zone d’intervention</strong>
+                    <span>Île-de-France avec déplacement, France entière en kit accompagné.</span>
+                  </div>
+                  <div class="contact-point">
+                    <strong>Contact direct</strong>
+                    <span>bonjour@digitaldoor.fr · Support 7j/7 pour abonnés.</span>
+                  </div>
+                </div>
+              </div>
+
+              <form
+                class="contact-form"
+                name="contact"
+                method="POST"
+                data-netlify="true"
+                netlify-honeypot="bot-field"
+                action="merci.html"
+              >
+                <input type="hidden" name="form-name" value="contact" />
+                <p hidden>
+                  <label>
+                    Ne pas remplir ce champ
+                    <input name="bot-field" />
+                  </label>
+                </p>
+
+                <div class="field-grid field-grid--two">
+                  <label class="form-field">
+                    <span>Nom</span>
+                    <input type="text" name="nom" placeholder="Votre nom" required />
+                  </label>
+                  <label class="form-field">
+                    <span>E-mail</span>
+                    <input type="email" name="email" placeholder="vous@exemple.com" required />
+                  </label>
+                </div>
+
+                <div class="field-grid field-grid--two">
+                  <label class="form-field">
+                    <span>Téléphone</span>
+                    <input type="tel" name="telephone" placeholder="+33 6 00 00 00 00" />
+                  </label>
+                  <label class="form-field">
+                    <span>Ville</span>
+                    <input type="text" name="ville" placeholder="Paris, Lille, Marseille..." />
+                  </label>
+                </div>
+
+                <div class="field-grid field-grid--two">
+                  <label class="form-field">
+                    <span>Nombre de portes</span>
+                    <select name="portes" required>
+                      <option value="">Sélectionner</option>
+                      <option>1 porte</option>
+                      <option>2 à 5 portes</option>
+                      <option>6 à 10 portes</option>
+                      <option>11+ portes</option>
+                    </select>
+                  </label>
+                  <label class="form-field">
+                    <span>Plateforme</span>
+                    <select name="plateforme" required>
+                      <option value="">Sélectionner</option>
+                      <option>Airbnb</option>
+                      <option>Booking</option>
+                      <option>Abritel / VRBO</option>
+                      <option>Plusieurs plateformes</option>
+                      <option>Autre</option>
+                    </select>
+                  </label>
+                </div>
+
+                <div class="field-grid field-grid--two">
+                  <label class="form-field">
+                    <span>Type de demande</span>
+                    <select name="demande" required>
+                      <option value="">Sélectionner</option>
+                      <option>Diagnostic gratuit</option>
+                      <option>Devis 1 porte</option>
+                      <option>Devis multi-biens</option>
+                      <option>Question technique</option>
+                    </select>
+                  </label>
+                  <label class="form-field">
+                    <span>Installation souhaitée</span>
+                    <select name="installation" required>
+                      <option value="">Sélectionner</option>
+                      <option>Technicien sur place</option>
+                      <option>Kit auto-installation</option>
+                      <option>À déterminer</option>
+                    </select>
+                  </label>
+                </div>
+
+                <label class="form-field">
+                  <span>Message</span>
+                  <textarea
+                    name="message"
+                    rows="6"
+                    placeholder="Décrivez votre porte, votre logement, votre volume à équiper ou votre besoin."
+                    required
+                  ></textarea>
+                </label>
+
+                <label class="form-check">
+                  <input type="checkbox" name="consentement" required />
+                  <span>J’accepte d’être recontacté au sujet de ma demande.</span>
+                </label>
+
+                <div class="contact-form__actions">
+                  <button class="button button--primary" type="submit">Envoyer la demande</button>
+                  <span class="meta-text">Formulaire Netlify prêt pour la mise en ligne.</span>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="footer-grid">
+            <div>
+              <a class="logo" href="index.html">
+                <span class="logo__mark" aria-hidden="true"></span>
+                <span>DigitalDoor</span>
+              </a>
+              <p class="lede">
+                Serrures connectées, installation professionnelle et automatisation
+                d’accès pour locations courte durée.
+              </p>
+            </div>
+            <div>
+              <h4>Navigation</h4>
+              <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="serrures.html">Serrures</a></li>
+                <li><a href="packs.html">Packs</a></li>
+                <li><a href="compatibilite.html">Compatibilité</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4>Produits</h4>
+              <ul>
+                <li><a href="serrures.html#access">ACCESS</a></li>
+                <li><a href="serrures.html#pro">PRO Camera</a></li>
+                <li><a href="serrures.html#fortress">FORTRESS</a></li>
+                <li><a href="packs.html#subscriptions">Abonnements</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4>Ressources</h4>
+              <ul>
+                <li><a href="index.html#faq">FAQ</a></li>
+                <li><a href="compatibilite.html">Quiz de compatibilité</a></li>
+                <li><a href="packs.html#installation">Installation</a></li>
+                <li><a href="mailto:bonjour@digitaldoor.fr">Contact</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4>Suivi</h4>
+              <ul>
+                <li><a href="mailto:bonjour@digitaldoor.fr">bonjour@digitaldoor.fr</a></li>
+                <li><a href="https://instagram.com" target="_blank" rel="noreferrer">Instagram</a></li>
+                <li><a href="https://linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a></li>
+                <li><a href="https://tiktok.com" target="_blank" rel="noreferrer">TikTok</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-meta">
+            © <span id="year"></span> DigitalDoor. Site statique prêt pour GitHub et Netlify.
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

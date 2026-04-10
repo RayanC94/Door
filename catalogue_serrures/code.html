@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-on-surface": "#f0f0f2",
+                    "on-secondary-container": "#f9f7ff",
+                    "on-secondary": "#ffffff",
+                    "inverse-primary": "#c6c4df",
+                    "secondary-fixed": "#dae1ff",
+                    "surface-container-lowest": "#ffffff",
+                    "surface": "#f9f9fb",
+                    "on-background": "#1a1c1d",
+                    "surface-variant": "#e2e2e4",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-low": "#f3f3f5",
+                    "secondary-fixed-dim": "#b3c5ff",
+                    "surface-container-high": "#e8e8ea",
+                    "outline-variant": "#c8c5cd",
+                    "on-tertiary-fixed-variant": "#00531e",
+                    "error-container": "#ffdad6",
+                    "on-error-container": "#93000a",
+                    "error": "#ba1a1a",
+                    "inverse-surface": "#2f3132",
+                    "outline": "#78767d",
+                    "on-secondary-fixed": "#001849",
+                    "on-surface": "#1a1c1d",
+                    "primary-fixed": "#e2e0fc",
+                    "surface-container-highest": "#e2e2e4",
+                    "tertiary-container": "#002208",
+                    "primary": "#00000b",
+                    "tertiary": "#000100",
+                    "surface-bright": "#f9f9fb",
+                    "background": "#f9f9fb",
+                    "on-surface-variant": "#47464c",
+                    "secondary-container": "#0266ff",
+                    "on-error": "#ffffff",
+                    "tertiary-fixed": "#69ff87",
+                    "on-primary-container": "#83829b",
+                    "secondary": "#0050cc",
+                    "on-primary-fixed-variant": "#45455b",
+                    "on-tertiary-fixed": "#002108",
+                    "surface-tint": "#5d5c74",
+                    "primary-fixed-dim": "#c6c4df",
+                    "surface-dim": "#d9dadc",
+                    "on-primary": "#ffffff",
+                    "surface-container": "#eeeef0",
+                    "primary-container": "#1a1a2e",
+                    "tertiary-fixed-dim": "#3ce36a",
+                    "on-tertiary-container": "#00993e",
+                    "on-secondary-fixed-variant": "#003fa4",
+                    "on-primary-fixed": "#1a1a2e"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Inter"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .glass-header {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .halo-success {
+            background: radial-gradient(circle, rgba(0, 200, 83, 0.15) 0%, rgba(0, 200, 83, 0) 70%);
+        }
+        .halo-primary {
+            background: radial-gradient(circle, rgba(2, 102, 255, 0.1) 0%, rgba(2, 102, 255, 0) 70%);
+        }
+        .btn-gradient {
+            background: linear-gradient(135deg, #0066FF 0%, #003fa4 100%);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body">
+<!-- TopNavBar Shell -->
+<nav class="fixed top-0 w-full z-50 bg-slate-50/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-sm">
+<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+<div class="text-2xl font-bold tracking-tight text-slate-900 dark:text-slate-50">SecureCurator</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-blue-600 dark:text-blue-400 border-b-2 border-blue-600 pb-1 font-sans antialiased text-base font-medium" href="#">Locks</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors font-sans antialiased text-base font-medium" href="#">Packs</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors font-sans antialiased text-base font-medium" href="#">Compatibility</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors font-sans antialiased text-base font-medium" href="#">Contact</a>
+</div>
+<div class="flex items-center space-x-4">
+<button class="px-5 py-2 text-slate-600 dark:text-slate-400 font-medium hover:text-slate-900 transition-colors">Login</button>
+<button class="px-5 py-2 btn-gradient text-white rounded-xl font-medium hover:scale-[1.02] transition-transform duration-200 active:scale-95">Get Started</button>
+</div>
+</div>
+</nav>
+<main class="pt-32 pb-20">
+<!-- Hero Section -->
+<section class="max-w-7xl mx-auto px-8 mb-24">
+<div class="flex flex-col md:flex-row items-center gap-16">
+<div class="flex-1 space-y-6">
+<span class="inline-block py-1 px-3 rounded-full bg-secondary-fixed text-on-secondary-fixed text-xs font-bold tracking-widest uppercase">Catalogue Officiel</span>
+<h1 class="text-5xl md:text-7xl font-bold tracking-tight text-primary leading-tight">Nos Serrures Connectées</h1>
+<p class="text-xl text-on-surface-variant max-w-xl leading-relaxed">
+                        Conçues pour les hôtes exigeants. Une sécurité de grade professionnel alliée à une expérience utilisateur fluide pour vous et vos voyageurs.
+                    </p>
+</div>
+<div class="flex-1 relative">
+<div class="absolute -inset-4 halo-primary rounded-full"></div>
+<img class="relative z-10 w-full h-[500px] object-cover rounded-3xl shadow-2xl" data-alt="Close-up of a sleek, modern matte black smart lock with digital keypad glowing softly in a high-end designer home setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeLEuLrc1YD4qPfj4v4YJ-BlJBNx5XcFzq1F_AfAqTUgl5kRPUozfK_7c8j-aRyepd06MFkn3rnZ6cj5BB00uc8njLIRcGN2cRENmQ-hRBJbLWfCGU6COb23WQ5BjEhTJMmeYz8loRwVOEAQ5hF87qCrBGsQ05qPcXJ65_eSeuRFGCjt-5PVmsFbznePbGYh6WIMhqjMl2wFNMDx09000WD0b_vid5t3FMqZeI_bjqmBmJGQNLd5HOk_8J8X2EM7VeM_yLRbX0cU96"/>
+</div>
+</div>
+</section>
+<!-- Bento Comparison Grid -->
+<section class="max-w-7xl mx-auto px-8 mb-32">
+<div class="mb-12">
+<h2 class="text-3xl font-bold text-primary mb-4">Comparatif de la Gamme</h2>
+<p class="text-on-surface-variant">Choisissez le niveau de protection adapté à votre propriété.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- ACCESS 0102 -->
+<div class="bg-surface-container-low rounded-3xl p-8 flex flex-col hover:scale-[1.01] transition-transform">
+<div class="mb-8">
+<h3 class="text-2xl font-bold text-primary mb-1">ACCESS</h3>
+<p class="text-on-primary-container font-mono text-sm">Modèle 0102</p>
+</div>
+<div class="flex-grow space-y-4 mb-8">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">check_circle</span>
+<span class="text-on-surface">Clavier Tactile HD</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">check_circle</span>
+<span class="text-on-surface">Semi-Automatique</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">check_circle</span>
+<span class="text-on-surface">Autonomie 12 mois</span>
+</div>
+</div>
+<div class="mt-auto">
+<p class="text-3xl font-extrabold text-primary mb-4">249€ <span class="text-sm font-normal text-on-surface-variant">/ pack solo</span></p>
+<button class="w-full py-3 border border-outline-variant/20 rounded-xl font-bold text-primary hover:bg-surface-container-high transition-colors">Détails techniques</button>
+</div>
+</div>
+<!-- PRO 0104 - FEATURED -->
+<div class="relative bg-primary-container rounded-3xl p-8 flex flex-col transform md:-translate-y-4 shadow-xl border-2 border-secondary/30">
+<div class="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-secondary text-white text-xs font-bold rounded-full">MOST POPULAR</div>
+<div class="mb-8">
+<h3 class="text-2xl font-bold text-white mb-1">PRO</h3>
+<p class="text-on-primary-container font-mono text-sm">Modèle 0104</p>
+</div>
+<div class="flex-grow space-y-4 mb-8">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary-fixed">face_6</span>
+<span class="text-surface-variant">Reconnaissance Faciale 3D</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary-fixed">videocam</span>
+<span class="text-surface-variant">Caméra HD Intégrée</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary-fixed">bolt</span>
+<span class="text-surface-variant">Full-Auto Silencieux</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary-fixed">battery_very_low</span>
+<span class="text-surface-variant">Batterie Lithium 5000mAh</span>
+</div>
+</div>
+<div class="mt-auto">
+<p class="text-3xl font-extrabold text-white mb-4">389€ <span class="text-sm font-normal text-on-primary-container">/ pack solo</span></p>
+<button class="w-full py-3 btn-gradient text-white rounded-xl font-bold hover:scale-[1.02] transition-transform">Commander maintenant</button>
+</div>
+</div>
+<!-- FORTRESS 0113 -->
+<div class="bg-surface-container-low rounded-3xl p-8 flex flex-col hover:scale-[1.01] transition-transform">
+<div class="mb-8">
+<h3 class="text-2xl font-bold text-primary mb-1">FORTRESS</h3>
+<p class="text-on-primary-container font-mono text-sm">Modèle 0113</p>
+</div>
+<div class="flex-grow space-y-4 mb-8">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">verified_user</span>
+<span class="text-on-surface">Blindage Acier Trempé</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">fingerprint</span>
+<span class="text-on-surface">Biométrie Bio-Crypter</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">wifi_protected_setup</span>
+<span class="text-on-surface">Double Connexion Redondante</span>
+</div>
+</div>
+<div class="mt-auto">
+<p class="text-3xl font-extrabold text-primary mb-4">599€ <span class="text-sm font-normal text-on-surface-variant">/ pack solo</span></p>
+<button class="w-full py-3 border border-outline-variant/20 rounded-xl font-bold text-primary hover:bg-surface-container-high transition-colors">Détails techniques</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Focused Detail Section: PRO 0104 -->
+<section class="max-w-7xl mx-auto px-8 mb-32">
+<div class="bg-surface-container-lowest rounded-[40px] overflow-hidden">
+<div class="grid grid-cols-1 lg:grid-cols-2">
+<div class="p-12 lg:p-20 flex flex-col justify-center order-2 lg:order-1">
+<label class="text-secondary font-bold text-sm tracking-widest uppercase mb-4">Focus Produit
+<h2 class="text-4xl font-bold text-primary mb-6">Le standard de l'hôtellerie moderne : Modèle PRO</h2>
+<p class="text-on-surface-variant text-lg mb-8 leading-relaxed">
+                            Le modèle PRO (0104) n'est pas seulement une serrure, c'est votre nouveau concierge. Grâce à sa caméra HD et son IA de reconnaissance faciale, accueillez vos clients avant même qu'ils ne touchent la porte.
+                        </p>
+<div class="space-y-6 mb-10">
+<div class="flex gap-5">
+<div class="w-12 h-12 rounded-2xl bg-surface-container-high flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary">visibility</span>
+</div>
+<div>
+<h4 class="font-bold text-primary">Reconnaissance Faciale 3D</h4>
+<p class="text-on-surface-variant">Identification instantanée en moins de 0.4s, même dans l'obscurité totale.</p>
+</div>
+</div>
+<div class="flex gap-5">
+<div class="w-12 h-12 rounded-2xl bg-surface-container-high flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary">videocam</span>
+</div>
+<div>
+<h4 class="font-bold text-primary">HD Live Stream</h4>
+<p class="text-on-surface-variant">Consultez qui est à la porte en temps réel depuis votre smartphone.</p>
+</div>
+</div>
+<div class="flex gap-5">
+<div class="w-12 h-12 rounded-2xl bg-surface-container-high flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary">battery_charging_full</span>
+</div>
+<div>
+<h4 class="font-bold text-primary">Autonomie Longue Durée</h4>
+<p class="text-on-surface-variant">Batterie haute densité 5000mAh rechargeable via USB-C.</p>
+</div>
+</div>
+</div>
+<div class="flex items-baseline gap-4 border-t border-surface-container-high pt-8">
+<span class="text-4xl font-bold text-primary">389€</span>
+<span class="text-on-surface-variant line-through text-xl">449€</span>
+<span class="ml-auto text-tertiary font-bold px-3 py-1 bg-tertiary-fixed rounded-lg text-sm">Offre Lancement</span>
+</div>
+</label></div>
+<div class="relative min-h-[400px] order-1 lg:order-2">
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="High-detail close up of the PRO smart lock camera lens and glowing circular status light, professional studio lighting with metallic textures" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnwWdkOiw5lbawQWgKPZ-Udi7GtyFsrB0wshhKlDrqMXs5zt2FhVbkgZquL5bBKsyBnhGasA9VUz12-0-e3XVu92xauTeqKiNgBhNHPVVwUisUcfUd1gVbViZd7dH3uThhyGCOeIA7FUIFRaRi6_R4fIgO-pYRR9Eu4XSt2LIgux-qDy6n6kCwbgDg7UmgPtirJ7m3Rk4WeEBkqFQGW1AKe19e8HKw-41cFyeTbhz9l96iH1wbsRua-6x01d47lPryArkX-UIryphh"/>
+<div class="absolute inset-0 bg-gradient-to-l from-primary/20 to-transparent"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Technical Specs Table -->
+<section class="max-w-7xl mx-auto px-8 mb-32">
+<h2 class="text-3xl font-bold text-primary mb-12 text-center">Spécifications Techniques</h2>
+<div class="overflow-hidden rounded-3xl border border-outline-variant/10">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-high">
+<th class="p-6 text-on-surface font-bold">Caractéristique</th>
+<th class="p-6 text-on-surface font-bold">ACCESS 0102</th>
+<th class="p-6 text-on-secondary-fixed-variant font-bold bg-secondary-fixed/30">PRO 0104</th>
+<th class="p-6 text-on-surface font-bold">FORTRESS 0113</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container">
+<tr class="bg-surface-container-lowest">
+<td class="p-6 font-medium">Mécanisme</td>
+<td class="p-6">Semi-Automatique</td>
+<td class="p-6 bg-secondary-fixed/10">Full-Auto</td>
+<td class="p-6">Full-Auto Premium</td>
+</tr>
+<tr class="bg-surface-container-low">
+<td class="p-6 font-medium">Modes d'accès</td>
+<td class="p-6">Code, App, Clé</td>
+<td class="p-6 bg-secondary-fixed/10">Visage, Code, App, Clé</td>
+<td class="p-6">Visage, Empreinte, Code, App, Clé</td>
+</tr>
+<tr class="bg-surface-container-lowest">
+<td class="p-6 font-medium">Connectivité</td>
+<td class="p-6">Wi-Fi 2.4GHz</td>
+<td class="p-6 bg-secondary-fixed/10">Wi-Fi + Bluetooth 5.0</td>
+<td class="p-6">Dual-Band Wi-Fi + Zigbee</td>
+</tr>
+<tr class="bg-surface-container-low">
+<td class="p-6 font-medium">Épaisseur porte</td>
+<td class="p-6">35-60mm</td>
+<td class="p-6 bg-secondary-fixed/10">35-90mm</td>
+<td class="p-6">35-120mm</td>
+</tr>
+<tr class="bg-surface-container-lowest">
+<td class="p-6 font-medium">Résistance Météo</td>
+<td class="p-6 text-on-surface-variant">IP54</td>
+<td class="p-6 bg-secondary-fixed/10 text-on-surface">IP65</td>
+<td class="p-6 text-on-surface">IP67 Premium</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="max-w-7xl mx-auto px-8">
+<div class="bg-primary rounded-[40px] p-12 md:p-20 text-center relative overflow-hidden">
+<div class="absolute top-0 right-0 w-96 h-96 halo-primary opacity-30 -translate-y-1/2 translate-x-1/2"></div>
+<div class="relative z-10">
+<h2 class="text-4xl md:text-5xl font-bold text-white mb-8">Prêt à sécuriser vos revenus ?</h2>
+<p class="text-on-primary-container text-xl max-w-2xl mx-auto mb-12">
+                        Nos packs incluent l'installation professionnelle et 1 an de support premium.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<button class="px-10 py-5 btn-gradient text-white rounded-xl font-bold text-lg hover:scale-105 transition-transform">Découvrir les Packs</button>
+<button class="px-10 py-5 bg-white/10 text-white rounded-xl font-bold text-lg hover:bg-white/20 transition-colors backdrop-blur-md">Contacter un expert</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Shell -->
+<footer class="w-full border-t border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 px-8 py-12 max-w-7xl mx-auto">
+<div class="space-y-4">
+<div class="text-xl font-bold text-slate-900 dark:text-slate-100">SecureCurator</div>
+<p class="font-sans text-sm text-slate-500 dark:text-slate-400 leading-relaxed">Expert en automatisation de serrures intelligentes pour l'immobilier locatif de prestige.</p>
+</div>
+<div class="flex flex-col gap-4">
+<span class="text-slate-900 dark:text-slate-50 font-semibold text-sm">Produits</span>
+<a class="text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 hover:underline underline-offset-4 text-sm transition-opacity hover:opacity-80" href="#">ACCESS 0102</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 hover:underline underline-offset-4 text-sm transition-opacity hover:opacity-80" href="#">PRO 0104</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 hover:underline underline-offset-4 text-sm transition-opacity hover:opacity-80" href="#">FORTRESS 0113</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="text-slate-900 dark:text-slate-50 font-semibold text-sm">Ressources</span>
+<a class="text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 hover:underline underline-offset-4 text-sm transition-opacity hover:opacity-80" href="#">Installation Guide</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 hover:underline underline-offset-4 text-sm transition-opacity hover:opacity-80" href="#">Support</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 hover:underline underline-offset-4 text-sm transition-opacity hover:opacity-80" href="#">Terms of Service</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="text-slate-900 dark:text-slate-50 font-semibold text-sm">Newsletter</span>
+<div class="flex gap-2">
+<input class="bg-surface-container-low border-none rounded-lg text-sm w-full focus:ring-2 focus:ring-secondary/50" placeholder="Email" type="email"/>
+<button class="material-symbols-outlined p-2 bg-secondary text-white rounded-lg">send</button>
+</div>
+<p class="text-xs text-slate-400">© 2024 SecureCurator Smart Automation. All rights reserved.</p>
+</div>
+</div>
+</footer>
+</body></html>

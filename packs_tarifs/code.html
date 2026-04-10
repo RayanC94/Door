@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-on-surface": "#f0f0f2",
+                    "on-secondary-container": "#f9f7ff",
+                    "on-secondary": "#ffffff",
+                    "inverse-primary": "#c6c4df",
+                    "secondary-fixed": "#dae1ff",
+                    "surface-container-lowest": "#ffffff",
+                    "surface": "#f9f9fb",
+                    "on-background": "#1a1c1d",
+                    "surface-variant": "#e2e2e4",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-low": "#f3f3f5",
+                    "secondary-fixed-dim": "#b3c5ff",
+                    "surface-container-high": "#e8e8ea",
+                    "outline-variant": "#c8c5cd",
+                    "on-tertiary-fixed-variant": "#00531e",
+                    "error-container": "#ffdad6",
+                    "on-error-container": "#93000a",
+                    "error": "#ba1a1a",
+                    "inverse-surface": "#2f3132",
+                    "outline": "#78767d",
+                    "on-secondary-fixed": "#001849",
+                    "on-surface": "#1a1c1d",
+                    "primary-fixed": "#e2e0fc",
+                    "surface-container-highest": "#e2e2e4",
+                    "tertiary-container": "#002208",
+                    "primary": "#00000b",
+                    "tertiary": "#000100",
+                    "surface-bright": "#f9f9fb",
+                    "background": "#f9f9fb",
+                    "on-surface-variant": "#47464c",
+                    "secondary-container": "#0266ff",
+                    "on-error": "#ffffff",
+                    "tertiary-fixed": "#69ff87",
+                    "on-primary-container": "#83829b",
+                    "secondary": "#0050cc",
+                    "on-primary-fixed-variant": "#45455b",
+                    "on-tertiary-fixed": "#002108",
+                    "surface-tint": "#5d5c74",
+                    "primary-fixed-dim": "#c6c4df",
+                    "surface-dim": "#d9dadc",
+                    "on-primary": "#ffffff",
+                    "surface-container": "#eeeef0",
+                    "primary-container": "#1a1a2e",
+                    "tertiary-fixed-dim": "#3ce36a",
+                    "on-tertiary-container": "#00993e",
+                    "on-secondary-fixed-variant": "#003fa4",
+                    "on-primary-fixed": "#1a1a2e"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Inter"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .glass-nav { backdrop-filter: blur(20px); }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .status-halo {
+            background: radial-gradient(circle, rgba(0, 200, 83, 0.15) 0%, rgba(0, 200, 83, 0) 70%);
+        }
+        .gradient-card {
+            background: linear-gradient(135deg, #1a1a2e 0%, #45455b 100%);
+        }
+        .primary-cta-gradient {
+            background: linear-gradient(135deg, #0066FF 0%, #003fa4 100%);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-slate-50/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-sm">
+<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+<div class="text-2xl font-bold tracking-tight text-slate-900 dark:text-slate-50">SecureCurator</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors font-sans antialiased text-base font-medium" href="#">Locks</a>
+<a class="text-blue-600 dark:text-blue-400 border-b-2 border-blue-600 pb-1 font-sans antialiased text-base font-medium" href="#">Packs</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors font-sans antialiased text-base font-medium" href="#">Compatibility</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors font-sans antialiased text-base font-medium" href="#">Contact</a>
+</div>
+<div class="flex items-center space-x-4">
+<button class="text-slate-600 dark:text-slate-400 font-medium hover:scale-[1.02] transition-transform duration-200">Login</button>
+<button class="bg-blue-600 dark:bg-blue-400 text-white dark:text-slate-900 px-6 py-2 rounded-xl font-semibold shadow-md hover:scale-[1.02] active:scale-95 transition-all">Get Started</button>
+</div>
+</div>
+</nav>
+<main class="pt-32 pb-24 px-6 md:px-12 max-w-7xl mx-auto">
+<!-- Hero Section -->
+<header class="mb-20 text-center md:text-left">
+<span class="text-secondary font-semibold tracking-widest text-[0.6875rem] uppercase mb-4 block">Solutions Clé-en-main</span>
+<h1 class="text-5xl md:text-6xl font-bold text-primary tracking-tight leading-tight mb-6 max-w-4xl">
+                Packs Tout-Compris : Fourniture + Installation + Automatisation
+            </h1>
+<p class="text-on-surface-variant text-lg max-w-2xl font-light">
+                Libérez-vous de la gestion des clés. Nous installons, configurons et synchronisons votre serrure intelligente avec votre calendrier de réservation.
+            </p>
+</header>
+<!-- Pricing Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
+<!-- Pack Starter -->
+<div class="flex flex-col bg-surface-container-lowest rounded-full p-8 transition-transform duration-300 hover:scale-[1.01] relative overflow-hidden group">
+<div class="mb-8">
+<h3 class="text-2xl font-bold text-primary mb-2">Pack Starter</h3>
+<div class="flex items-baseline gap-1">
+<span class="text-4xl font-extrabold text-primary">299€</span>
+<span class="text-on-surface-variant text-sm">/unité</span>
+</div>
+</div>
+<ul class="space-y-4 mb-10 flex-grow">
+<li class="flex items-center gap-3 text-on-surface">
+<span class="material-symbols-outlined text-tertiary-fixed-dim bg-tertiary-container/10 p-1 rounded-lg">check</span>
+<span class="text-sm font-medium">Serrure Smart Pro v3</span>
+</li>
+<li class="flex items-center gap-3 text-on-surface">
+<span class="material-symbols-outlined text-tertiary-fixed-dim bg-tertiary-container/10 p-1 rounded-lg">check</span>
+<span class="text-sm font-medium">Installation par un tech qualifié</span>
+</li>
+<li class="flex items-center gap-3 text-on-surface">
+<span class="material-symbols-outlined text-tertiary-fixed-dim bg-tertiary-container/10 p-1 rounded-lg">check</span>
+<span class="text-sm font-medium">Config Wi-Fi Bridge</span>
+</li>
+<li class="flex items-center gap-3 text-on-surface">
+<span class="material-symbols-outlined text-tertiary-fixed-dim bg-tertiary-container/10 p-1 rounded-lg">check</span>
+<span class="text-sm font-medium">Support Mail 3 mois</span>
+</li>
+</ul>
+<button class="w-full py-4 px-6 border-2 border-outline-variant/20 rounded-xl text-primary font-bold hover:bg-surface-container-low transition-colors">Choisir ce pack</button>
+</div>
+<!-- Pack Business -->
+<div class="flex flex-col bg-primary-container text-white rounded-full p-8 transition-transform duration-300 hover:scale-[1.02] relative shadow-2xl z-10">
+<div class="absolute top-4 right-8 bg-secondary text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">Le Plus Populaire</div>
+<div class="mb-8">
+<h3 class="text-2xl font-bold mb-2">Pack Business</h3>
+<div class="flex items-baseline gap-1">
+<span class="text-4xl font-extrabold text-white">449€</span>
+<span class="text-on-primary-container text-sm">/unité</span>
+</div>
+</div>
+<ul class="space-y-4 mb-10 flex-grow">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary-fixed">check</span>
+<span class="text-sm font-medium">Serrure Ultra-Secure Elite</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary-fixed">check</span>
+<span class="text-sm font-medium">Installation Prioritaire (48h)</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary-fixed">check</span>
+<span class="text-sm font-medium">Automatisation Airbnb &amp; Booking</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary-fixed">check</span>
+<span class="text-sm font-medium">Clavier Digicode Tactile Inclus</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary-fixed">check</span>
+<span class="text-sm font-medium">Support Concierge 12 mois</span>
+</li>
+</ul>
+<button class="w-full py-4 px-6 primary-cta-gradient rounded-xl text-white font-bold shadow-lg shadow-blue-500/20 active:scale-95 transition-all">Choisir ce pack</button>
+</div>
+<!-- Pack Enterprise -->
+<div class="flex flex-col bg-surface-container-lowest rounded-full p-8 transition-transform duration-300 hover:scale-[1.01] relative overflow-hidden">
+<div class="mb-8">
+<h3 class="text-2xl font-bold text-primary mb-2">Pack Enterprise</h3>
+<div class="flex items-baseline gap-1">
+<span class="text-4xl font-extrabold text-primary">699€</span>
+<span class="text-on-surface-variant text-sm">/unité</span>
+</div>
+</div>
+<ul class="space-y-4 mb-10 flex-grow">
+<li class="flex items-center gap-3 text-on-surface">
+<span class="material-symbols-outlined text-tertiary-fixed-dim bg-tertiary-container/10 p-1 rounded-lg">check</span>
+<span class="text-sm font-medium">Serrure Biométrique &amp; NFC</span>
+</li>
+<li class="flex items-center gap-3 text-on-surface">
+<span class="material-symbols-outlined text-tertiary-fixed-dim bg-tertiary-container/10 p-1 rounded-lg">check</span>
+<span class="text-sm font-medium">Installation Multipoints Renforcée</span>
+</li>
+<li class="flex items-center gap-3 text-on-surface">
+<span class="material-symbols-outlined text-tertiary-fixed-dim bg-tertiary-container/10 p-1 rounded-lg">check</span>
+<span class="text-sm font-medium">Sync Multicanal PMS (Guesty, Smoobu...)</span>
+</li>
+<li class="flex items-center gap-3 text-on-surface">
+<span class="material-symbols-outlined text-tertiary-fixed-dim bg-tertiary-container/10 p-1 rounded-lg">check</span>
+<span class="text-sm font-medium">Maintenance Annuelle Incluse</span>
+</li>
+<li class="flex items-center gap-3 text-on-surface">
+<span class="material-symbols-outlined text-tertiary-fixed-dim bg-tertiary-container/10 p-1 rounded-lg">check</span>
+<span class="text-sm font-medium">Garantie Matériel à Vie</span>
+</li>
+</ul>
+<button class="w-full py-4 px-6 border-2 border-outline-variant/20 rounded-xl text-primary font-bold hover:bg-surface-container-low transition-colors">Choisir ce pack</button>
+</div>
+</div>
+<!-- Investors Bulk Pricing -->
+<section class="bg-surface-container-low rounded-full p-12 mb-24 relative overflow-hidden">
+<div class="relative z-10 grid md:grid-cols-2 gap-12 items-center">
+<div>
+<h2 class="text-3xl font-bold text-primary mb-4 leading-tight">Programme Investisseurs &amp; Gestionnaires</h2>
+<p class="text-on-surface-variant mb-8 text-lg">
+                        Vous gérez plus de 10 appartements ? Bénéficiez de nos tarifs dégressifs exclusifs pour sécuriser votre parc immobilier à moindre coût.
+                    </p>
+<div class="flex gap-4">
+<div class="bg-surface-container-highest p-4 rounded-xl text-center">
+<span class="block text-2xl font-bold text-secondary">10+</span>
+<span class="text-xs font-semibold uppercase text-on-surface-variant">Portes</span>
+<div class="mt-2 bg-tertiary-fixed-dim/20 text-on-tertiary-fixed-variant px-2 py-0.5 rounded-full text-[10px] font-bold">-15%</div>
+</div>
+<div class="bg-surface-container-highest p-4 rounded-xl text-center">
+<span class="block text-2xl font-bold text-secondary">25+</span>
+<span class="text-xs font-semibold uppercase text-on-surface-variant">Portes</span>
+<div class="mt-2 bg-tertiary-fixed-dim/20 text-on-tertiary-fixed-variant px-2 py-0.5 rounded-full text-[10px] font-bold">-25%</div>
+</div>
+<div class="bg-surface-container-highest p-4 rounded-xl text-center">
+<span class="block text-2xl font-bold text-secondary">50+</span>
+<span class="text-xs font-semibold uppercase text-on-surface-variant">Portes</span>
+<div class="mt-2 bg-tertiary-fixed-dim/20 text-on-tertiary-fixed-variant px-2 py-0.5 rounded-full text-[10px] font-bold">-40%</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-full shadow-lg border border-outline-variant/10">
+<h4 class="text-xl font-bold mb-6">Demander un devis Groupe</h4>
+<form class="space-y-4">
+<input class="w-full bg-surface-container-low border-none rounded-xl focus:ring-2 focus:ring-secondary text-sm" placeholder="Nom de l'entreprise" type="text"/>
+<input class="w-full bg-surface-container-low border-none rounded-xl focus:ring-2 focus:ring-secondary text-sm" placeholder="E-mail professionnel" type="email"/>
+<div class="flex gap-4">
+<input class="w-full bg-surface-container-low border-none rounded-xl focus:ring-2 focus:ring-secondary text-sm" placeholder="Nb de portes" type="number"/>
+<button class="bg-primary text-white px-6 py-3 rounded-xl font-bold text-sm whitespace-nowrap hover:opacity-90">Envoyer</button>
+</div>
+</form>
+</div>
+</div>
+<!-- Decorative image representing scale -->
+<div class="absolute -right-20 -bottom-20 opacity-5 pointer-events-none">
+<span class="material-symbols-outlined text-[300px]">domain</span>
+</div>
+</section>
+<!-- Option B: DIY Table -->
+<section class="mb-24">
+<div class="text-center mb-12">
+<h2 class="text-3xl font-bold text-primary mb-4">Option B : Kits Auto-Installation</h2>
+<p class="text-on-surface-variant max-w-2xl mx-auto">
+                    Vous êtes bricoleur ? Recevez votre kit pré-configuré et installez-le vous-même en moins de 15 minutes.
+                </p>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-separate border-spacing-y-2">
+<thead>
+<tr class="text-on-surface-variant text-sm font-semibold uppercase tracking-wider">
+<th class="px-8 py-4">Modèle</th>
+<th class="px-8 py-4">Inclusions</th>
+<th class="px-8 py-4">Garantie</th>
+<th class="px-8 py-4 text-right">Prix Kit</th>
+</tr>
+</thead>
+<tbody class="text-on-surface">
+<tr class="bg-surface-container-lowest group hover:bg-surface-container-low transition-colors">
+<td class="px-8 py-6 rounded-l-full font-bold">Standard DIY Kit</td>
+<td class="px-8 py-6">Serrure + Passerelle Wi-Fi + Guide PDF</td>
+<td class="px-8 py-6">12 mois</td>
+<td class="px-8 py-6 rounded-r-full text-right font-bold text-secondary">189€</td>
+</tr>
+<tr class="bg-surface-container-low group hover:bg-surface-container-high transition-colors">
+<td class="px-8 py-6 rounded-l-full font-bold">Advanced DIY Kit</td>
+<td class="px-8 py-6">Serrure + Keypad + Vidéo de config personnalisée</td>
+<td class="px-8 py-6">24 mois</td>
+<td class="px-8 py-6 rounded-r-full text-right font-bold text-secondary">259€</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- Satisfaction Guarantee Bento -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="bg-white p-12 rounded-full flex items-center gap-8 shadow-sm">
+<div class="status-halo p-6 rounded-full flex-shrink-0">
+<span class="material-symbols-outlined text-on-tertiary-container text-5xl" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<div>
+<h4 class="text-xl font-bold mb-2">Certification Sécurité</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">
+                        Toutes nos installations sont certifiées conformes aux normes européennes de résistance à l'effraction.
+                    </p>
+</div>
+</div>
+<div class="bg-white p-12 rounded-full flex items-center gap-8 shadow-sm">
+<div class="bg-secondary/10 p-6 rounded-full flex-shrink-0">
+<span class="material-symbols-outlined text-secondary text-5xl">support_agent</span>
+</div>
+<div>
+<h4 class="text-xl font-bold mb-2">Support 24/7 Voyageurs</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">
+                        En cas de problème d'accès, notre équipe est disponible jour et nuit pour assister vos guests à distance.
+                    </p>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-50 dark:bg-slate-950 w-full border-t border-slate-200 dark:border-slate-800">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 px-8 py-12 max-w-7xl mx-auto">
+<div class="space-y-4">
+<div class="text-xl font-bold text-slate-900 dark:text-slate-100">SecureCurator</div>
+<p class="font-sans text-sm text-slate-500 dark:text-slate-400">
+                    Solutions intelligentes pour une hospitalité sans friction.
+                </p>
+</div>
+<div>
+<h5 class="font-semibold text-slate-900 dark:text-slate-100 mb-4">Produit</h5>
+<ul class="space-y-2">
+<li><a class="font-sans text-sm text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 hover:underline underline-offset-4 transition-opacity" href="#">Serrures</a></li>
+<li><a class="font-sans text-sm text-slate-900 dark:text-slate-50 font-semibold hover:text-blue-600 dark:hover:text-blue-400 hover:underline underline-offset-4 transition-opacity" href="#">Packs All-Inclusive</a></li>
+<li><a class="font-sans text-sm text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 hover:underline underline-offset-4 transition-opacity" href="#">API</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-semibold text-slate-900 dark:text-slate-100 mb-4">Support</h5>
+<ul class="space-y-2">
+<li><a class="font-sans text-sm text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 hover:underline underline-offset-4 transition-opacity" href="#">Installation Guide</a></li>
+<li><a class="font-sans text-sm text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 hover:underline underline-offset-4 transition-opacity" href="#">Terms of Service</a></li>
+<li><a class="font-sans text-sm text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 hover:underline underline-offset-4 transition-opacity" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-semibold text-slate-900 dark:text-slate-100 mb-4">Newsletter</h5>
+<p class="font-sans text-sm text-slate-500 dark:text-slate-400 mb-4">Recevez nos conseils pour automatiser vos locations.</p>
+<div class="flex gap-2">
+<input class="bg-slate-100 dark:bg-slate-900 border-none rounded-lg text-sm w-full" placeholder="Email" type="text"/>
+<button class="bg-blue-600 text-white px-3 rounded-lg"><span class="material-symbols-outlined">send</span></button>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-8 py-6 border-t border-slate-100 dark:border-slate-900 text-center">
+<p class="font-sans text-sm text-slate-500 dark:text-slate-400">© 2024 SecureCurator Smart Automation. All rights reserved.</p>
+</div>
+</footer>
+</body></html>

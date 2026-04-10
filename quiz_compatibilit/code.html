@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-on-surface": "#f0f0f2",
+                    "on-secondary-container": "#f9f7ff",
+                    "on-secondary": "#ffffff",
+                    "inverse-primary": "#c6c4df",
+                    "secondary-fixed": "#dae1ff",
+                    "surface-container-lowest": "#ffffff",
+                    "surface": "#f9f9fb",
+                    "on-background": "#1a1c1d",
+                    "surface-variant": "#e2e2e4",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-low": "#f3f3f5",
+                    "secondary-fixed-dim": "#b3c5ff",
+                    "surface-container-high": "#e8e8ea",
+                    "outline-variant": "#c8c5cd",
+                    "on-tertiary-fixed-variant": "#00531e",
+                    "error-container": "#ffdad6",
+                    "on-error-container": "#93000a",
+                    "error": "#ba1a1a",
+                    "inverse-surface": "#2f3132",
+                    "outline": "#78767d",
+                    "on-secondary-fixed": "#001849",
+                    "on-surface": "#1a1c1d",
+                    "primary-fixed": "#e2e0fc",
+                    "surface-container-highest": "#e2e2e4",
+                    "tertiary-container": "#002208",
+                    "primary": "#00000b",
+                    "tertiary": "#000100",
+                    "surface-bright": "#f9f9fb",
+                    "background": "#f9f9fb",
+                    "on-surface-variant": "#47464c",
+                    "secondary-container": "#0266ff",
+                    "on-error": "#ffffff",
+                    "tertiary-fixed": "#69ff87",
+                    "on-primary-container": "#83829b",
+                    "secondary": "#0050cc",
+                    "on-primary-fixed-variant": "#45455b",
+                    "on-tertiary-fixed": "#002108",
+                    "surface-tint": "#5d5c74",
+                    "primary-fixed-dim": "#c6c4df",
+                    "surface-dim": "#d9dadc",
+                    "on-primary": "#ffffff",
+                    "surface-container": "#eeeef0",
+                    "primary-container": "#1a1a2e",
+                    "tertiary-fixed-dim": "#3ce36a",
+                    "on-tertiary-container": "#00993e",
+                    "on-secondary-fixed-variant": "#003fa4",
+                    "on-primary-fixed": "#1a1a2e"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Inter"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .step-inactive { display: none; }
+        .gradient-primary {
+            background: linear-gradient(135deg, #1a1a2e 0%, #45455b 100%);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-secondary-fixed">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-slate-50/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-sm">
+<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+<div class="text-2xl font-bold tracking-tight text-slate-900 dark:text-slate-50 font-headline">SecureCurator</div>
+<div class="hidden md:flex items-center gap-8 font-sans antialiased text-base font-medium">
+<a class="text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors" href="#">Locks</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors" href="#">Packs</a>
+<a class="text-blue-600 dark:text-blue-400 border-b-2 border-blue-600 pb-1" href="#">Compatibility</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors" href="#">Contact</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="hidden md:block text-slate-600 font-medium px-4 py-2 transition-opacity hover:opacity-80">Login</button>
+<button class="bg-secondary-container text-on-secondary-container px-6 py-2.5 rounded-xl font-semibold shadow-sm hover:scale-[1.02] active:scale-95 transition-all">Get Started</button>
+</div>
+</div>
+</nav>
+<main class="pt-24 pb-20 min-h-screen flex flex-col items-center">
+<!-- Progress Header -->
+<div class="w-full max-w-3xl px-8 mb-12">
+<div class="flex justify-between items-end mb-4">
+<div>
+<span class="text-secondary font-semibold text-sm tracking-wider uppercase">Étape de configuration</span>
+<h1 class="text-3xl font-bold font-headline text-primary mt-1">Vérificateur de Compatibilité</h1>
+</div>
+<div class="text-on-surface-variant font-medium">
+<span id="current-step-num">3</span> / 5
+                </div>
+</div>
+<div class="w-full h-1.5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-secondary-container w-[60%] transition-all duration-500"></div>
+</div>
+</div>
+<!-- Quiz Container: Step 3 as active example -->
+<div class="w-full max-w-4xl px-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- Quiz Card -->
+<div class="lg:col-span-7 bg-surface-container-lowest rounded-xl p-8 shadow-[0_20px_40px_rgba(26,28,29,0.04)]">
+<!-- Step 3: Thickness Slider (Example Active Step) -->
+<div class="space-y-8" id="step-3">
+<div class="space-y-2">
+<h2 class="text-2xl font-bold text-on-surface">Épaisseur de votre porte</h2>
+<p class="text-on-surface-variant leading-relaxed">Mesurez l'épaisseur totale de votre porte au niveau de la serrure. Cette information est cruciale pour le choix du cylindre.</p>
+</div>
+<div class="py-12 px-4 bg-surface-container-low rounded-xl">
+<div class="relative w-full">
+<input class="w-full h-2 bg-outline-variant rounded-lg appearance-none cursor-pointer accent-secondary" max="120" min="30" type="range" value="45"/>
+<div class="flex justify-between mt-4 text-sm font-medium text-on-surface-variant">
+<span>30mm</span>
+<span>120mm</span>
+</div>
+</div>
+<div class="mt-10 text-center">
+<span class="text-5xl font-extrabold text-primary tracking-tighter">45</span>
+<span class="text-xl font-bold text-on-surface-variant ml-1">mm</span>
+</div>
+</div>
+<div class="flex gap-4">
+<button class="flex-1 px-6 py-4 rounded-xl border border-outline-variant/20 font-semibold text-on-surface hover:bg-surface-container-low transition-all">Précédent</button>
+<button class="flex-[2] px-6 py-4 rounded-xl gradient-primary text-white font-semibold shadow-lg hover:scale-[1.02] active:scale-95 transition-all">Continuer</button>
+</div>
+</div>
+</div>
+<!-- Contextual Sidebar -->
+<div class="lg:col-span-5 space-y-6">
+<div class="bg-primary-container rounded-xl p-6 text-on-primary-container">
+<div class="flex items-center gap-3 mb-4">
+<div class="w-10 h-10 rounded-full bg-secondary-container/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary-fixed">info</span>
+</div>
+<h3 class="font-bold text-white">Pourquoi cette mesure ?</h3>
+</div>
+<p class="text-sm leading-relaxed opacity-80">
+                        La Série 85 s'adapte à 95% des portes standard, mais les portes renforcées ou anciennes nécessitent des adaptateurs spécifiques que nous incluons gratuitement si nécessaire.
+                    </p>
+</div>
+<div class="bg-surface-container-low rounded-xl overflow-hidden">
+<img class="w-full h-48 object-cover" data-alt="close up of a professional metal ruler measuring the edge of a modern wooden apartment door for thickness accuracy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDR9-Hp7Mf_dfpSFsWQcKDSnUV-LvyrlSH4L2b412lKFpLw25NbvX2u6GNGH6SewATL1j9WXvRBMv05EjTY9lgvkW-hMq9HKDYba8MGQtPJWSqccWKl3w9bV13wD8h7mrpUm_CuKUpd6jnSnBb6KSaKZHfOZZ7hMqlhErlZhVsy6qeBGD3xbkvpiq93ErpPrcXbcpV8zIjGFHeRL4Id-QMEzOiy3qVsUD3_pdSNvwwSu30z8ePHCjt2-xM_sorP4tJTkhEMd3E0LsK_"/>
+<div class="p-4">
+<p class="text-xs font-bold text-secondary uppercase tracking-widest mb-1">Guide de mesure</p>
+<p class="text-sm font-medium text-on-surface">Comment mesurer sans erreur ?</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Result View (Hidden initially, shown here for structure) -->
+<!-- Logic note: This section would toggle visibility with the quiz card above -->
+<div class="hidden w-full max-w-5xl px-8 mt-12 animate-in fade-in slide-in-from-bottom-4" id="result-page">
+<div class="grid grid-cols-1 md:grid-cols-2 bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_40px_80px_rgba(26,28,29,0.08)]">
+<!-- Visual Config -->
+<div class="relative min-h-[400px] gradient-primary flex items-center justify-center p-12 overflow-hidden">
+<div class="absolute inset-0 opacity-20">
+<img class="w-full h-full object-cover" data-alt="abstract technical blueprint of a smart lock mechanism with glowing blue digital circuits on dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCe_uNYT0LhWztKemhLhPpBaYI3oa7MwUkOOXhbRuaWKtCKnxnr7jglvfWW0S4F3KzYVQyyEkDlMpd190UYgPrrSFVZvO4iWQK1KtmnFLeJutb3WTU8aO4f_tQ0LW58gjaW-1xhTSjuKVPgrC2LHRAuyeTYGwWEu4dER73MGIzA7uzB4wX1r4ZS5RldZ08osT02XirLDIKDrfou7AY23bIwdNAtXl1cNpNQQEEvluCaN1uf5fwygFDFk1_jbBcToqkxOsM60vBMyJhk"/>
+</div>
+<!-- Status Halo -->
+<div class="absolute w-64 h-64 bg-tertiary-container/30 rounded-full blur-3xl"></div>
+<img class="relative z-10 w-full max-w-sm drop-shadow-2xl" data-alt="premium silver smart lock body series 85 mounted on a luxury black door with minimalist handle design" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUrPu4mUGy6RwB1tYWxmSCQ6M2N-MvLcNP7MZxOsgRwDeYY6THj-dqqwP9h5YT-aeBC0BrtnhKK2bF2UhB3WE1JphrYas3W8xeDUkqJFVRB_jnXBMQjEeLzXTniJcbZ-VNeW70xHX_UwYwnkdO0-LUb3eu8iPnY7ogwm2Q7jMpPa1Mc5HdValdE4D3rPGMl03Wx6pZF4BaO6SXbEAfrPD03bQvXlibpbUVT5jI8mpnKpTH3HDL6hlttK7faZ8u0TrK3hbp_pB8eobw"/>
+<div class="absolute bottom-8 left-8 flex items-center gap-3 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/10">
+<span class="material-symbols-outlined text-tertiary-fixed" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-white text-sm font-semibold tracking-wide">Compatible à 100%</span>
+</div>
+</div>
+<!-- Recommendation Content -->
+<div class="p-12 flex flex-col justify-center space-y-8">
+<div>
+<span class="text-secondary font-bold text-sm tracking-widest uppercase">Résultat de l'analyse</span>
+<h2 class="text-4xl font-extrabold font-headline text-primary mt-2 leading-tight">Pack Business avec Lock Body Série 85</h2>
+<p class="text-on-surface-variant text-lg mt-4 leading-relaxed">Basé sur vos réponses, ce pack est la solution optimale pour sécuriser vos accès tout en gardant une compatibilité Wi-Fi parfaite.</p>
+</div>
+<div class="space-y-4">
+<div class="flex items-start gap-4 p-4 bg-surface-container-low rounded-xl">
+<span class="material-symbols-outlined text-secondary mt-1">verified_user</span>
+<div>
+<p class="font-bold text-on-surface">Certification Haute Sécurité</p>
+<p class="text-sm text-on-surface-variant">Conforme aux normes A2P* pour vos assurances.</p>
+</div>
+</div>
+<div class="flex items-start gap-4 p-4 bg-surface-container-low rounded-xl">
+<span class="material-symbols-outlined text-secondary mt-1">bolt</span>
+<div>
+<p class="font-bold text-on-surface">Installation Express</p>
+<p class="text-sm text-on-surface-variant">Prêt à l'emploi en moins de 15 minutes.</p>
+</div>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row gap-4 pt-4">
+<button class="flex-1 gradient-primary text-white px-8 py-4 rounded-xl font-bold shadow-lg hover:scale-[1.02] transition-all">Commander le Pack</button>
+<button class="flex-1 border border-outline-variant/30 text-primary px-8 py-4 rounded-xl font-bold hover:bg-surface-container-low transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-xl">calendar_today</span>
+Diagnostic 15-min
+                        </button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-50 dark:bg-slate-950 w-full border-t border-slate-200 dark:border-slate-800">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 px-8 py-12 max-w-7xl mx-auto">
+<div class="space-y-4">
+<div class="text-xl font-bold text-slate-900 dark:text-slate-100 font-headline">SecureCurator</div>
+<p class="font-sans text-sm text-slate-500 dark:text-slate-400 leading-relaxed">Solution de gestion d'accès premium pour l'hospitalité moderne et les entreprises exigeantes.</p>
+</div>
+<div class="space-y-4">
+<h4 class="font-bold text-slate-900 dark:text-slate-50">Produits</h4>
+<ul class="space-y-2 font-sans text-sm text-slate-500 dark:text-slate-400">
+<li><a class="hover:text-blue-600 dark:hover:text-blue-400 transition-opacity hover:opacity-80 hover:underline underline-offset-4" href="#">Smart Lock Pro</a></li>
+<li><a class="hover:text-blue-600 dark:hover:text-blue-400 transition-opacity hover:opacity-80 hover:underline underline-offset-4" href="#">Bridge Connect</a></li>
+<li><a class="hover:text-blue-600 dark:hover:text-blue-400 transition-opacity hover:opacity-80 hover:underline underline-offset-4" href="#">Access Dashboard</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-bold text-slate-900 dark:text-slate-50">Ressources</h4>
+<ul class="space-y-2 font-sans text-sm text-slate-500 dark:text-slate-400">
+<li><a class="hover:text-blue-600 dark:hover:text-blue-400 transition-opacity hover:opacity-80 hover:underline underline-offset-4" href="#">Installation Guide</a></li>
+<li><a class="hover:text-blue-600 dark:hover:text-blue-400 transition-opacity hover:opacity-80 hover:underline underline-offset-4" href="#">Support</a></li>
+<li><a class="hover:text-blue-600 dark:hover:text-blue-400 transition-opacity hover:opacity-80 hover:underline underline-offset-4" href="#">API Documentation</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-bold text-slate-900 dark:text-slate-50">Légal</h4>
+<ul class="space-y-2 font-sans text-sm text-slate-500 dark:text-slate-400">
+<li><a class="hover:text-blue-600 dark:hover:text-blue-400 transition-opacity hover:opacity-80 hover:underline underline-offset-4" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-blue-600 dark:hover:text-blue-400 transition-opacity hover:opacity-80 hover:underline underline-offset-4" href="#">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-8 py-6 border-t border-slate-200 dark:border-slate-900 text-center font-sans text-sm text-slate-500 dark:text-slate-400">
+            © 2024 SecureCurator Smart Automation. All rights reserved.
+        </div>
+</footer>
+</body></html>
