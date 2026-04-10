@@ -649,6 +649,56 @@ body.menu-open .nav-toggle__line::after {
   margin: 0;
 }
 
+.problem-cards,
+.solution-cards {
+  display: grid;
+  gap: 1rem;
+}
+
+.problem-cards {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 2rem;
+}
+
+.solution-cards {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 1.4rem;
+}
+
+.problem-card,
+.solution-card {
+  padding: 1.2rem 1.25rem;
+  border-radius: 1.6rem;
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.34),
+    var(--shadow-soft);
+}
+
+.problem-card strong,
+.solution-card strong {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-size: 0.98rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.problem-card span,
+.solution-card span {
+  color: var(--text-soft);
+}
+
+.proof-card {
+  margin-top: 2rem;
+  padding: 1.8rem;
+  border-radius: var(--radius-md);
+  background:
+    linear-gradient(135deg, rgba(17, 19, 34, 0.04), rgba(0, 102, 255, 0.08)),
+    rgba(255, 255, 255, 0.76);
+  box-shadow: var(--shadow);
+}
+
 .pain-list {
   display: grid;
   gap: 1rem;
@@ -958,7 +1008,7 @@ body.menu-open .nav-toggle__line::after {
   position: relative;
   display: grid;
   place-items: center;
-  min-height: 20rem;
+  min-height: 18.5rem;
   margin: 1rem 0 1.6rem;
   border-radius: 2rem;
   background:
@@ -973,9 +1023,15 @@ body.menu-open .nav-toggle__line::after {
 }
 
 .lock-image img {
-  max-height: 19rem;
+  max-height: 16.5rem;
   width: auto;
   filter: drop-shadow(0 24px 36px rgba(17, 19, 34, 0.18));
+  transform: scale(1.06);
+}
+
+.lock-image--featured img {
+  max-height: 17rem;
+  transform: scale(1.42);
 }
 
 .lock-card h3,
@@ -1542,8 +1598,33 @@ body.menu-open .nav-toggle__line::after {
 
 .pricing-note {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 1rem;
+}
+
+.subscription-rule {
+  padding: 1.5rem 1.6rem;
+  border-radius: var(--radius-md);
+  margin-bottom: 1rem;
+  background:
+    radial-gradient(circle at top right, rgba(0, 102, 255, 0.12), transparent 26%),
+    rgba(255, 255, 255, 0.72);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.36),
+    var(--shadow-soft);
+}
+
+.subscription-rule strong {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(1.9rem, 3vw, 2.6rem);
+  line-height: 0.95;
+  letter-spacing: -0.05em;
+}
+
+.subscription-rule span {
+  color: var(--text-soft);
 }
 
 .quiz-layout {
@@ -1786,6 +1867,8 @@ body.menu-open .nav-toggle__line::after {
   }
 
   .data-strip,
+  .problem-cards,
+  .solution-cards,
   .trust-grid,
   .steps,
   .lock-grid,
@@ -1807,6 +1890,10 @@ body.menu-open .nav-toggle__line::after {
 
   .showcase-lock--featured {
     grid-row: auto;
+  }
+
+  .solution-cards {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
@@ -1858,6 +1945,11 @@ body.menu-open .nav-toggle__line::after {
     grid-template-columns: 1fr;
   }
 
+  .problem-cards,
+  .solution-cards {
+    grid-template-columns: 1fr;
+  }
+
   .showcase-lock__media--featured {
     min-height: 22rem;
   }
@@ -1900,6 +1992,8 @@ body.menu-open .nav-toggle__line::after {
   }
 
   .data-strip,
+  .problem-cards,
+  .solution-cards,
   .trust-grid,
   .steps,
   .lock-grid,
@@ -1932,6 +2026,10 @@ body.menu-open .nav-toggle__line::after {
   .showcase-lock__facts,
   .pricing-note {
     grid-template-columns: 1fr;
+  }
+
+  .lock-image--featured img {
+    transform: scale(1.22);
   }
 
   .contact-form {

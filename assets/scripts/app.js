@@ -133,7 +133,7 @@ function initCompatibilityQuiz() {
         "Fonctions essentielles : code, empreinte, badge, clé de secours et mots de passe temporaires.",
         "Parfait pour un studio, un T2 ou une première location saisonnière."
       ],
-      tech: "Matériel + lock body + installation DigitalDoor. L’automatisation s’active via l’abonnement Automation Start."
+      tech: "Matériel + lock body + installation DigitalDoor. Automatisation : 20 € / mois jusqu’à 10 portes, puis +5 € par tranche de 10."
     },
     business: {
       pack: "Pack Business",
@@ -147,7 +147,7 @@ function initCompatibilityQuiz() {
         "Caméra judas HD et reconnaissance faciale 3D sur la version mise en avant.",
         "Très bon équilibre entre sécurité, confort voyageur et budget."
       ],
-      tech: "Matériel + installation complète. L’automatisation s’active via l’abonnement Automation Pro."
+      tech: "Matériel + installation complète. Automatisation : 20 € / mois jusqu’à 10 portes, puis +5 € par tranche de 10."
     },
     enterprise: {
       pack: "Pack Enterprise",
@@ -161,7 +161,7 @@ function initCompatibilityQuiz() {
         "Double batterie, caméra HD et capacité renforcée pour une exploitation intensive.",
         "Particulièrement adapté aux investisseurs, conciergeries et logements premium."
       ],
-      tech: "Matériel + installation renforcée. L’automatisation s’active via l’abonnement Automation Fleet."
+      tech: "Matériel + installation renforcée. Automatisation : 20 € / mois jusqu’à 10 portes, puis +5 € par tranche de 10."
     }
   };
 
