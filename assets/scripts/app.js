@@ -108,7 +108,7 @@ function initCompatibilityQuiz() {
     },
     {
       title: "Connexion et automatisation",
-      text: "Le Wi-Fi sert à piloter à distance, à voir les alertes et à connecter TTLock ou Tuya à tes plateformes de réservation."
+      text: "Le Wi-Fi sert à alimenter le pilotage à distance, les alertes et l’automatisation opérée par le système DigitalDoor."
     },
     {
       title: "Volume à équiper",
@@ -127,13 +127,13 @@ function initCompatibilityQuiz() {
       price: "299 €",
       image: "assets/images/102.png",
       summary:
-        "Le bon choix pour démarrer sur une porte standard avec une automatisation simple et fiable.",
+        "Le bon choix pour démarrer sur une porte standard avec une installation simple et efficace.",
       reasons: [
         "Volume réduit à équiper, donc pack d’entrée pertinent.",
         "Fonctions essentielles : code, empreinte, badge, clé de secours et mots de passe temporaires.",
         "Parfait pour un studio, un T2 ou une première location saisonnière."
       ],
-      tech: "Installation technicien + lock body inclus + automatisation de base + support 3 mois."
+      tech: "Matériel + lock body + installation DigitalDoor. L’automatisation s’active via l’abonnement Automation Start."
     },
     business: {
       pack: "Pack Business",
@@ -147,7 +147,7 @@ function initCompatibilityQuiz() {
         "Caméra judas HD et reconnaissance faciale 3D sur la version mise en avant.",
         "Très bon équilibre entre sécurité, confort voyageur et budget."
       ],
-      tech: "Installation technicien + codes prestataires + automatisation avancée + support 6 mois."
+      tech: "Matériel + installation complète. L’automatisation s’active via l’abonnement Automation Pro."
     },
     enterprise: {
       pack: "Pack Enterprise",
@@ -161,7 +161,7 @@ function initCompatibilityQuiz() {
         "Double batterie, caméra HD et capacité renforcée pour une exploitation intensive.",
         "Particulièrement adapté aux investisseurs, conciergeries et logements premium."
       ],
-      tech: "Dashboard multi-biens + maintenance annuelle + support 12 mois + autonomie renforcée."
+      tech: "Matériel + installation renforcée. L’automatisation s’active via l’abonnement Automation Fleet."
     }
   };
 

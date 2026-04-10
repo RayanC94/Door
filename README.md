@@ -6,29 +6,28 @@ Site statique DigitalDoor pour présentation, prise de contact et préqualificat
 
 - `index.html` : page d'accueil
 - `serrures.html` : catalogue produits
-- `packs.html` : packs, installation, abonnements
+- `packs.html` : packs installés et abonnements
 - `compatibilite.html` : quiz interactif
 - `merci.html` : confirmation après envoi du formulaire
 - `assets/styles/styles.css` : styles partagés
 - `assets/scripts/app.js` : interactions front
 
+## Offre
+
+- Les serrures ne sont pas vendues seules
+- Installation DigitalDoor uniquement
+- Automatisation gérée via abonnement DigitalDoor Automation
+
 ## Formulaire
 
-Le formulaire de contact de la home est configuré pour **Netlify Forms** :
+Le formulaire de la home est prêt côté HTML.
 
-- `name="contact"`
-- `method="POST"`
-- `data-netlify="true"`
-- `netlify-honeypot="bot-field"`
-- redirection vers `merci.html`
+- Page de confirmation : `merci.html`
+- Les champs principaux sont déjà posés
+- Le backend de réception peut être branché selon l’hébergement final
 
-Une fois le repo connecté à Netlify, les soumissions remonteront dans l'onglet **Forms**.
+## Déploiement
 
-## Déploiement Netlify
+Le site est statique. Il peut être publié sur GitHub Pages, Netlify, Vercel ou tout autre hébergement de fichiers statiques.
 
-Réglages simples :
-
-- Build command : vide
-- Publish directory : `.`
-
-Le fichier `netlify.toml` pointe déjà vers la racine du projet.
+`netlify.toml` reste présent si besoin de l’utiliser plus tard, mais il n’est pas obligatoire.
